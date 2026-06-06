@@ -15,9 +15,4 @@ We meet weekly to rehearse member-voted musical selections, culminating in an en
 
 ## Get Involved
 
-Whether you are interested in music, philanthropy, fundraising, or just want to meet new people, Philanthropic Playlist is open to students who want to make an impact. Musicians of all instruments and experience levels are welcome!
-
-[Learn more about us](about.md)  
-[View our events](events.md)  
-[Contact us](contact.md)
-[Join our newsletter] 
+Whether you are interested in music, fundraising, or just want to meet new people, Philanthropic Playlist is open to students who want to make an impact. Musicians of all instruments and experience levels are welcome!
