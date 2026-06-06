@@ -1,50 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }} | Philanthropic Playlist</title>
-  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-</head>
-
 <body>
-  <div class="site-frame">
-    <aside class="sidebar">
-      <a href="{{ '/' | relative_url }}" class="brand">PP</a>
+  <div class="transition-curtain"></div>
 
-      <div class="sidebar-section">
-        <p class="sidebar-label">Pages</p>
-        <nav class="sidebar-nav">
-          <a href="{{ '/' | relative_url }}">Home</a>
-          <a href="{{ '/about.md' | relative_url }}">About</a>
-          <a href="{{ '/events.md' | relative_url }}">Events</a>
-          <a href="{{ '/impact.md' | relative_url }}">Impact</a>
-          <a href="{{ '/team.md' | relative_url }}">Team</a>
-        </nav>
-      </div>
-    </aside>
+  <div class="page-stage">
+    <div class="site-frame">
+      <aside class="sidebar">
+        <a href="{{ '/' | relative_url }}" class="brand">PP</a>
 
-    <main class="main-content">
-      {{ content }}
-    </main>
+        <div class="sidebar-section">
+          <p class="sidebar-label">Pages</p>
+          <nav class="sidebar-nav">
+            <a href="{{ '/' | relative_url }}">Home</a>
+            <a href="{{ '/about.md' | relative_url }}">About</a>
+            <a href="{{ '/events.md' | relative_url }}">Events</a>
+            <a href="{{ '/impact.md' | relative_url }}">Impact</a>
+            <a href="{{ '/team.md' | relative_url }}">Team</a>
+          </nav>
+        </div>
+      </aside>
 
-    <section class="feature-panel">
-      <div class="feature-card">
-        <p class="feature-label">Featured</p>
-        <h2>End-of-Semester Performance</h2>
-        <p>Music with a mission. Join us as we perform member-voted selections and raise funds for meaningful causes.</p>
-      </div>
-    </section>
+      <main class="main-content">
+        {{ content }}
+      </main>
 
-    <footer class="bottom-bar">
-      <div class="contact-links">
-        <a href="https://tr.ee/t-r7v1qI7g" target="_blank">GroupMe ↗</a>
-        <a href="https://tr.ee/vzHsk8rVMf" target="_blank">Newsletter ↗</a>
-        <a href="https://tr.ee/T2Tzoa-vV5" target="_blank">Instagram ↗</a>
-      </div>
+      <section class="feature-panel">
+        <div class="feature-card">
+          <p class="feature-label">Featured</p>
+          <h2>End-of-Semester Performance</h2>
+          <p>Music with a mission. Join us as we perform member-voted selections and raise funds for meaningful causes.</p>
+        </div>
+      </section>
 
-      <p>University of Illinois · Philanthropic Playlist</p>
-    </footer>
+      <footer class="bottom-bar">
+        <div class="contact-links">
+          <a href="https://tr.ee/t-r7v1qI7g" target="_blank">GroupMe ↗</a>
+          <a href="https://tr.ee/vzHsk8rVMf" target="_blank">Newsletter ↗</a>
+          <a href="https://tr.ee/T2Tzoa-vV5" target="_blank">Instagram ↗</a>
+        </div>
+
+        <p>University of Illinois · Philanthropic Playlist</p>
+      </footer>
+    </div>
   </div>
+
+  <script src="{{ '/assets/js/transitions.js' | relative_url }}"></script>
 </body>
-</html>
