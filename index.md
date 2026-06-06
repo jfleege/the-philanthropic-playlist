@@ -1,3 +1,8 @@
+---
+layout: default
+title: Home
+---
+
 # Philanthropic Playlist
 
 **Music, Community, Giving**
