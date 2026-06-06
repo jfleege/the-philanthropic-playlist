@@ -8,44 +8,46 @@
 </head>
 
 <body>
-  <div class="transition-layer">
-    <span></span>
-    <span></span>
-    <span></span>
+  <div class="page-wipe"></div>
+
+  <div class="site-shell">
+    <aside class="side-rail">
+      <a href="{{ '/' | relative_url }}" class="rail-logo">♪</a>
+      <p class="rail-text">DON'T BE A STRANGER</p>
+      <span class="rail-chat">☏</span>
+    </aside>
+
+    <section class="site-panel">
+      <nav class="site-nav">
+        <div class="nav-links">
+          <a href="{{ '/' | relative_url }}">Home</a>
+          <a href="{{ '/about.md' | relative_url }}">About</a>
+          <a href="{{ '/events.md' | relative_url }}">Events</a>
+          <a href="{{ '/impact.md' | relative_url }}">Impact</a>
+          <a href="{{ '/team.md' | relative_url }}">Team</a>
+        </div>
+
+        <div class="status-pill">
+          ○ Currently welcoming new members
+        </div>
+      </nav>
+
+      <main class="page-content">
+        {{ content }}
+      </main>
+
+      <footer class="contact-banner">
+        <p class="footer-label">Get in touch</p>
+        <h2>Want to join, perform, collaborate, or support an event?</h2>
+
+        <div class="contact-links">
+          <a href="https://tr.ee/t-r7v1qI7g" target="_blank">Join Our GroupMe</a>
+          <a href="https://tr.ee/vzHsk8rVMf" target="_blank">Newsletter</a>
+          <a href="https://tr.ee/T2Tzoa-vV5" target="_blank">Instagram</a>
+        </div>
+      </footer>
+    </section>
   </div>
-
-  <div class="background-shapes">
-    <div class="shape shape-one"></div>
-    <div class="shape shape-two"></div>
-    <div class="shape shape-three"></div>
-  </div>
-
-  <nav class="site-nav">
-    <a href="{{ '/' | relative_url }}" class="logo">Philanthropic Playlist</a>
-
-    <div class="nav-links">
-      <a href="{{ '/about.md' | relative_url }}">About</a>
-      <a href="{{ '/events.md' | relative_url }}">Events</a>
-      <a href="{{ '/impact.md' | relative_url }}">Impact</a>
-      <a href="{{ '/team.md' | relative_url }}">Team</a>
-    </div>
-  </nav>
-
-  <main class="page-content">
-    {{ content }}
-  </main>
-
-  <footer class="contact-banner">
-    <p class="footer-label">Get in Touch</p>
-
-    <h2>Interested in joining, performing, collaborating, or learning more?</h2>
-
-    <div class="contact-links">
-      <a href="https://tr.ee/t-r7v1qI7g" target="_blank">Join Our GroupMe</a>
-      <a href="https://tr.ee/vzHsk8rVMf" target="_blank">Join Our Newsletter</a>
-      <a href="https://tr.ee/T2Tzoa-vV5" target="_blank">Follow Us on Instagram</a>
-    </div>
-  </footer>
 
   <script src="{{ '/assets/js/transitions.js' | relative_url }}"></script>
 </body>
