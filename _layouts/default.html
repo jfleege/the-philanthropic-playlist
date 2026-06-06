@@ -8,47 +8,43 @@
 </head>
 
 <body>
-  <div class="page-wipe"></div>
+  <div class="site-frame">
+    <aside class="sidebar">
+      <a href="{{ '/' | relative_url }}" class="brand">PP</a>
 
-  <div class="site-shell">
-    <aside class="side-rail">
-      <a href="{{ '/' | relative_url }}" class="rail-logo">♪</a>
-      <p class="rail-text">DON'T BE A STRANGER</p>
-      <span class="rail-chat">☏</span>
-    </aside>
-
-    <section class="site-panel">
-      <nav class="site-nav">
-        <div class="nav-links">
+      <div class="sidebar-section">
+        <p class="sidebar-label">Pages</p>
+        <nav class="sidebar-nav">
           <a href="{{ '/' | relative_url }}">Home</a>
           <a href="{{ '/about.md' | relative_url }}">About</a>
           <a href="{{ '/events.md' | relative_url }}">Events</a>
           <a href="{{ '/impact.md' | relative_url }}">Impact</a>
           <a href="{{ '/team.md' | relative_url }}">Team</a>
-        </div>
+        </nav>
+      </div>
+    </aside>
 
-        <div class="status-pill">
-          ○ Currently welcoming new members
-        </div>
-      </nav>
+    <main class="main-content">
+      {{ content }}
+    </main>
 
-      <main class="page-content">
-        {{ content }}
-      </main>
-
-      <footer class="contact-banner">
-        <p class="footer-label">Get in touch</p>
-        <h2>Want to join, perform, collaborate, or support an event?</h2>
-
-        <div class="contact-links">
-          <a href="https://tr.ee/t-r7v1qI7g" target="_blank">Join Our GroupMe</a>
-          <a href="https://tr.ee/vzHsk8rVMf" target="_blank">Newsletter</a>
-          <a href="https://tr.ee/T2Tzoa-vV5" target="_blank">Instagram</a>
-        </div>
-      </footer>
+    <section class="feature-panel">
+      <div class="feature-card">
+        <p class="feature-label">Featured</p>
+        <h2>End-of-Semester Performance</h2>
+        <p>Music with a mission. Join us as we perform member-voted selections and raise funds for meaningful causes.</p>
+      </div>
     </section>
-  </div>
 
-  <script src="{{ '/assets/js/transitions.js' | relative_url }}"></script>
+    <footer class="bottom-bar">
+      <div class="contact-links">
+        <a href="https://tr.ee/t-r7v1qI7g" target="_blank">GroupMe ↗</a>
+        <a href="https://tr.ee/vzHsk8rVMf" target="_blank">Newsletter ↗</a>
+        <a href="https://tr.ee/T2Tzoa-vV5" target="_blank">Instagram ↗</a>
+      </div>
+
+      <p>University of Illinois · Philanthropic Playlist</p>
+    </footer>
+  </div>
 </body>
 </html>
