@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | Philanthropic Playlist</title>
+
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+
 <body>
   <div class="transition-curtain"></div>
 
@@ -8,6 +18,7 @@
 
         <div class="sidebar-section">
           <p class="sidebar-label">Pages</p>
+
           <nav class="sidebar-nav">
             <a href="{{ '/' | relative_url }}">Home</a>
             <a href="{{ '/about.md' | relative_url }}">About</a>
@@ -26,7 +37,9 @@
         <div class="feature-card">
           <p class="feature-label">Featured</p>
           <h2>End-of-Semester Performance</h2>
-          <p>Music with a mission. Join us as we perform member-voted selections and raise funds for meaningful causes.</p>
+          <p>
+            Music with a mission. Join us as we perform member-voted selections and raise funds for meaningful causes.
+          </p>
         </div>
       </section>
 
@@ -44,3 +57,4 @@
 
   <script src="{{ '/assets/js/transitions.js' | relative_url }}"></script>
 </body>
+</html>
