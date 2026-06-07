@@ -36,50 +36,6 @@ body {
   position: relative;
 }
 
-/* Main moving blobs in the page background */
-
-body::before,
-body::after {
-  content: "";
-  position: fixed;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.9;
-  filter: blur(1px);
-}
-
-body::before {
-  width: 34vw;
-  height: 30vw;
-  min-width: 260px;
-  min-height: 230px;
-  max-width: 560px;
-  max-height: 500px;
-  top: -8vh;
-  left: -8vw;
-  background: var(--blue-soft);
-  border-radius: 62% 38% 48% 52% / 52% 34% 66% 48%;
-  animation:
-    blobMorphOne 16s ease-in-out infinite,
-    blobFloatOne 24s ease-in-out infinite alternate;
-}
-
-body::after {
-  width: 28vw;
-  height: 24vw;
-  min-width: 220px;
-  min-height: 200px;
-  max-width: 460px;
-  max-height: 420px;
-  right: -8vw;
-  bottom: -6vh;
-  background: linear-gradient(135deg, var(--pink), var(--blue-soft));
-  border-radius: 42% 58% 67% 33% / 44% 39% 61% 56%;
-  animation:
-    blobMorphTwo 15s ease-in-out infinite,
-    blobFloatTwo 22s ease-in-out infinite alternate;
-}
-
 /* Soft decorative line arcs */
 
 html::before,
@@ -665,4 +621,66 @@ body.is-transitioning .transition-curtain::after {
   .contact-links {
     gap: 0.7rem;
   }
+}
+
+/* React moving blob background */
+
+#blob-background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.react-blob-layer {
+  position: absolute;
+  inset: 0;
+}
+
+.react-blob {
+  position: absolute;
+  opacity: 0.72;
+  filter: blur(1px);
+  will-change: transform, border-radius;
+  transition: border-radius 0.25s ease;
+}
+
+.react-blob-1 {
+  width: 420px;
+  height: 360px;
+  background: #a8d8ee;
+}
+
+.react-blob-2 {
+  width: 310px;
+  height: 270px;
+  background: #f8bf72;
+}
+
+.react-blob-3 {
+  width: 360px;
+  height: 310px;
+  background: #f4cbd0;
+}
+
+.react-blob-4 {
+  width: 300px;
+  height: 260px;
+  background: #f8bf72;
+}
+
+/* Make sure the actual site sits above the React blobs */
+
+.page-stage,
+.transition-curtain {
+  position: relative;
+}
+
+.page-stage {
+  z-index: 2;
+}
+
+.transition-curtain {
+  z-index: 9998;
 }
