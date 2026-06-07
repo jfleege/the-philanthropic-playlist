@@ -396,40 +396,6 @@ html::after {
   overflow: hidden;
 }
 
-.transition-curtain::before,
-.transition-curtain::after {
-  content: "";
-  position: absolute;
-  filter: blur(1px);
-  opacity: 0.92;
-}
-
-.transition-curtain::before {
-  width: 34vw;
-  height: 28vw;
-  min-width: 240px;
-  min-height: 200px;
-  max-width: 540px;
-  max-height: 440px;
-  top: -10vh;
-  left: -10vw;
-  background: var(--blue-soft);
-  border-radius: 59% 41% 46% 54% / 47% 35% 65% 53%;
-}
-
-.transition-curtain::after {
-  width: 30vw;
-  height: 25vw;
-  min-width: 220px;
-  min-height: 190px;
-  max-width: 480px;
-  max-height: 400px;
-  right: -8vw;
-  bottom: -10vh;
-  background: linear-gradient(135deg, var(--peach), var(--pink));
-  border-radius: 42% 58% 64% 36% / 56% 37% 63% 44%;
-}
-
 body.is-transitioning .page-stage {
   transform: scale(1.04) translateY(38px);
   opacity: 0.45;
@@ -439,18 +405,7 @@ body.is-transitioning .transition-curtain {
   opacity: 1;
   transform: translateY(0);
 }
-
-body.is-transitioning .transition-curtain::before {
-  animation:
-    curtainBlobOne 1.05s cubic-bezier(.76, 0, .24, 1) forwards,
-    blobMorphOne 8s ease-in-out infinite;
-}
-
-body.is-transitioning .transition-curtain::after {
-  animation:
-    curtainBlobTwo 1.05s cubic-bezier(.76, 0, .24, 1) forwards,
-    blobMorphTwo 7s ease-in-out infinite;
-}
+ 
 
 /* Blob motion */
 
