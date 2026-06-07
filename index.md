@@ -9,10 +9,10 @@ title: Home
   <p class="mission-label">Our Mission:</p>
 
   <div class="mission-rotator">
-    <span class="mission-line is-active">Turn music into meaningful community impact.</span>
-    <span class="mission-line">Rehearse, perform, and fundraise for local causes that matter.</span>
-    <span class="mission-line">Bring students together through creativity, service, and sound.</span>
-    <span class="mission-line">Believe every performance can support something bigger.</span>
+    <span class="mission-line is-active">turn music into meaningful community impact.</span>
+    <span class="mission-line">rehearse, perform, and fundraise for local causes that matter.</span>
+    <span class="mission-line">bring students together through creativity, service, and sound.</span>
+    <span class="mission-line">believe every performance can support something bigger.</span>
   </div>
 </section> 
 
