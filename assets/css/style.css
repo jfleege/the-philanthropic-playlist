@@ -9,12 +9,16 @@
   --muted: #9c9c94;
   --accent: #ff9f1c;
   --line: #1f1f1f;
+
+  --font-title: 'Playfair Display', serif;
+  --font-body: 'Inter', Arial, sans-serif;
+  --font-mono: 'Space Mono', monospace;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
   background: #111;
   color: var(--text);
 }
@@ -80,33 +84,38 @@ body {
 
 .main-content h1 {
   margin: 0 0 2rem;
-  font-size: clamp(3rem, 7vw, 6.5rem);
-  line-height: 0.95;
-  letter-spacing: -0.07em;
-  font-weight: 500;
+  font-family: var(--font-title);
+  font-size: clamp(3.5rem, 8vw, 7.5rem);
+  line-height: 0.9;
+  letter-spacing: -0.055em;
+  font-weight: 800;
 }
 
 .main-content strong {
   display: block;
   color: var(--accent);
+  font-family: var(--font-title);
   font-size: clamp(2rem, 5vw, 4.5rem);
-  line-height: 1;
-  font-weight: 500;
+  line-height: 0.95;
+  font-weight: 800;
+  letter-spacing: -0.045em;
   margin-bottom: 2rem;
 }
 
 .main-content h2 {
   margin: 2rem 0 0.75rem;
-  font-size: clamp(1.8rem, 4vw, 3.25rem);
+  font-family: var(--font-body);
+  font-size: clamp(1.6rem, 3vw, 2.8rem);
   line-height: 1;
-  letter-spacing: -0.05em;
-  font-weight: 500;
+  letter-spacing: -0.045em;
+  font-weight: 700;
 }
 
 .main-content p {
   color: var(--text);
-  font-size: 1.2rem;
-  line-height: 1.45;
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  line-height: 1.5;
   max-width: 760px;
 }
 
