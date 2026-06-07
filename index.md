@@ -10,12 +10,14 @@ title: Home
 
   <div class="mission-rotator">
     <span class="mission-line is-active">We turn music into meaningful community impact.</span>
-    <span class="mission-line">We rehearse, perform, and fundraise for causes that matter.</span>
+    <span class="mission-line">We rehearse, perform, and fundraise for local causes that matter.</span>
     <span class="mission-line">We bring students together through creativity, service, and sound.</span>
     <span class="mission-line">We believe every performance can support something bigger.</span>
   </div>
-</section>
+</section> 
 
-[Learn More](about.md)  
-[View Events](events.md)  
-[Meet the Team](team.md)
+<div class="home-actions">
+  <a href="about.html">Learn More</a>
+  <a href="events.html">View Events</a>
+  <a href="team.html">Meet the Team</a>
+</div>
