@@ -713,7 +713,7 @@ body.is-transitioning .transition-curtain {
 
 .mission-line {
   max-width: 900px;
-  font-size: clamp(1.9rem, 4.2vw, 4.4rem);
+  font-size: clamp(1.6rem, 3.4vw, 3.4rem);
   line-height: 1.08;
 }
 
