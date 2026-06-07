@@ -75,7 +75,7 @@ html::after {
   min-height: calc(100vh - 4rem);
   margin: 2rem;
   padding: 1.5rem;
-  background: rgba(255, 250, 246, 0.82);
+  background: rgba(255, 250, 246, 0.62);
   backdrop-filter: blur(6px);
   display: grid;
   grid-template-columns: 210px 1fr 360px;
@@ -642,8 +642,8 @@ body.is-transitioning .transition-curtain::after {
 
 .react-blob {
   position: absolute;
-  opacity: 0.55;
-  filter: blur(1px);
+  opacity: 0.72;
+  filter: blur(0.5px);
   will-change: transform, border-radius;
   transition: border-radius 0.25s ease;
 }
