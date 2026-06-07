@@ -625,6 +625,8 @@ body.is-transitioning .transition-curtain::after {
 
 /* React moving blob background */
 
+/* React moving blob background */
+
 #blob-background {
   position: fixed;
   inset: 0;
@@ -640,37 +642,11 @@ body.is-transitioning .transition-curtain::after {
 
 .react-blob {
   position: absolute;
-  opacity: 0.72;
+  opacity: 0.55;
   filter: blur(1px);
   will-change: transform, border-radius;
   transition: border-radius 0.25s ease;
 }
-
-.react-blob-1 {
-  width: 420px;
-  height: 360px;
-  background: #a8d8ee;
-}
-
-.react-blob-2 {
-  width: 310px;
-  height: 270px;
-  background: #f8bf72;
-}
-
-.react-blob-3 {
-  width: 360px;
-  height: 310px;
-  background: #f4cbd0;
-}
-
-.react-blob-4 {
-  width: 300px;
-  height: 260px;
-  background: #f8bf72;
-}
-
-/* Make sure the actual site sits above the React blobs */
 
 .page-stage,
 .transition-curtain {
