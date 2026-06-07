@@ -26,32 +26,76 @@ body {
   min-height: 100vh;
   font-family: var(--font-body);
   background:
-    radial-gradient(circle at 6% 14%, var(--blue-soft) 0 13%, transparent 13.3%),
-    radial-gradient(circle at 0% 50%, var(--pink) 0 9%, transparent 9.3%),
-    radial-gradient(circle at 17% 100%, var(--peach) 0 15%, transparent 15.3%),
-    radial-gradient(circle at 96% 10%, var(--peach) 0 12%, transparent 12.3%),
-    radial-gradient(circle at 100% 53%, var(--pink) 0 10%, transparent 10.3%),
-    radial-gradient(circle at 80% 100%, var(--blue-soft) 0 15%, transparent 15.3%),
+    radial-gradient(circle at 14% 78%, rgba(248, 191, 114, 0.35), transparent 18%),
+    radial-gradient(circle at 88% 18%, rgba(248, 191, 114, 0.35), transparent 14%),
+    radial-gradient(circle at 8% 46%, rgba(244, 203, 208, 0.45), transparent 14%),
+    radial-gradient(circle at 92% 60%, rgba(244, 203, 208, 0.45), transparent 12%),
     var(--tan);
   color: var(--blue);
   overflow-x: hidden;
+  position: relative;
 }
 
-/* Soft line decorations */
+/* Main moving blobs in the page background */
+
 body::before,
 body::after {
   content: "";
   position: fixed;
   pointer-events: none;
   z-index: 0;
-  opacity: 0.45;
+  opacity: 0.9;
+  filter: blur(1px);
+}
+
+body::before {
+  width: 34vw;
+  height: 30vw;
+  min-width: 260px;
+  min-height: 230px;
+  max-width: 560px;
+  max-height: 500px;
+  top: -8vh;
+  left: -8vw;
+  background: var(--blue-soft);
+  border-radius: 62% 38% 48% 52% / 52% 34% 66% 48%;
+  animation:
+    blobMorphOne 16s ease-in-out infinite,
+    blobFloatOne 24s ease-in-out infinite alternate;
+}
+
+body::after {
+  width: 28vw;
+  height: 24vw;
+  min-width: 220px;
+  min-height: 200px;
+  max-width: 460px;
+  max-height: 420px;
+  right: -8vw;
+  bottom: -6vh;
+  background: linear-gradient(135deg, var(--pink), var(--blue-soft));
+  border-radius: 42% 58% 67% 33% / 44% 39% 61% 56%;
+  animation:
+    blobMorphTwo 15s ease-in-out infinite,
+    blobFloatTwo 22s ease-in-out infinite alternate;
+}
+
+/* Soft decorative line arcs */
+
+html::before,
+html::after {
+  content: "";
+  position: fixed;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.38;
   border: 4px solid var(--blue);
   border-left: 0;
   border-bottom: 0;
   border-radius: 50%;
 }
 
-body::before {
+html::before {
   width: 420px;
   height: 420px;
   top: -170px;
@@ -59,7 +103,7 @@ body::before {
   transform: rotate(24deg);
 }
 
-body::after {
+html::after {
   width: 380px;
   height: 380px;
   left: -190px;
@@ -87,32 +131,39 @@ body::after {
   overflow: hidden;
 }
 
-/* Extra decorative blobs inside the frame */
+/* Moving inner blobs */
 
-.site-frame::before {
-  content: "";
-  position: absolute;
-  width: 260px;
-  height: 170px;
-  top: -55px;
-  left: 180px;
-  background: var(--blue-soft);
-  border-radius: 52% 48% 63% 37% / 45% 60% 40% 55%;
-  opacity: 0.65;
-  z-index: -1;
-}
-
+.site-frame::before,
 .site-frame::after {
   content: "";
   position: absolute;
-  width: 240px;
-  height: 180px;
-  right: -80px;
-  bottom: -40px;
-  background: var(--blue-soft);
-  border-radius: 60% 40% 45% 55% / 50% 55% 45% 50%;
-  opacity: 0.65;
   z-index: -1;
+  opacity: 0.7;
+  filter: blur(0.5px);
+}
+
+.site-frame::before {
+  width: 290px;
+  height: 190px;
+  top: -50px;
+  left: 160px;
+  background: var(--blue-soft);
+  border-radius: 58% 42% 65% 35% / 52% 64% 36% 48%;
+  animation:
+    blobMorphThree 14s ease-in-out infinite,
+    blobDriftThree 20s ease-in-out infinite alternate;
+}
+
+.site-frame::after {
+  width: 250px;
+  height: 190px;
+  right: -70px;
+  bottom: -40px;
+  background: linear-gradient(135deg, var(--blue-soft), rgba(244, 203, 208, 0.85));
+  border-radius: 38% 62% 44% 56% / 60% 40% 60% 40%;
+  animation:
+    blobMorphFour 18s ease-in-out infinite,
+    blobDriftFour 24s ease-in-out infinite alternate;
 }
 
 /* Sidebar */
@@ -255,9 +306,9 @@ body::after {
   flex-direction: column;
   justify-content: flex-end;
   background:
-    radial-gradient(circle at 85% 15%, rgba(248, 191, 114, 0.9), transparent 20%),
-    radial-gradient(circle at 12% 20%, rgba(168, 216, 238, 0.95), transparent 30%),
-    radial-gradient(circle at 85% 85%, rgba(244, 203, 208, 0.95), transparent 26%),
+    radial-gradient(circle at 80% 16%, rgba(248, 191, 114, 0.8), transparent 18%),
+    radial-gradient(circle at 18% 20%, rgba(168, 216, 238, 0.9), transparent 25%),
+    radial-gradient(circle at 88% 82%, rgba(244, 203, 208, 0.85), transparent 22%),
     var(--tan-light);
   border: 2px solid rgba(36, 103, 131, 0.13);
   border-radius: 28px;
@@ -265,30 +316,36 @@ body::after {
   overflow: hidden;
 }
 
-.feature-card::before {
-  content: "";
-  position: absolute;
-  width: 130px;
-  height: 130px;
-  left: -35px;
-  top: -35px;
-  background: var(--blue);
-  border-radius: 50%;
-  box-shadow:
-    22px 42px 0 -22px var(--blue),
-    45px 66px 0 -24px var(--blue),
-    68px 88px 0 -26px var(--blue);
-  opacity: 0.95;
-}
-
+.feature-card::before,
 .feature-card::after {
   content: "";
   position: absolute;
-  width: 180px;
-  height: 180px;
-  right: -65px;
-  bottom: -65px;
-  border: 8px solid rgba(36, 103, 131, 0.38);
+  pointer-events: none;
+}
+
+.feature-card::before {
+  width: 160px;
+  height: 120px;
+  left: -24px;
+  top: -18px;
+  background: var(--blue);
+  border-radius: 61% 39% 65% 35% / 58% 43% 57% 42%;
+  box-shadow:
+    -24px 18px 0 -14px rgba(36, 103, 131, 0.95),
+    -8px 54px 0 -20px rgba(36, 103, 131, 0.95),
+    18px 88px 0 -26px rgba(36, 103, 131, 0.95);
+  opacity: 0.95;
+  animation:
+    blobMorphMini 10s ease-in-out infinite,
+    blobWobbleMini 8s ease-in-out infinite alternate;
+}
+
+.feature-card::after {
+  width: 200px;
+  height: 200px;
+  right: -70px;
+  bottom: -55px;
+  border: 8px solid rgba(36, 103, 131, 0.34);
   border-left-color: transparent;
   border-bottom-color: transparent;
   border-radius: 50%;
@@ -370,16 +427,51 @@ body::after {
   inset: 0;
   z-index: 9998;
   background:
-    radial-gradient(circle at 8% 18%, var(--blue-soft) 0 16%, transparent 16.2%),
-    radial-gradient(circle at 92% 12%, var(--peach) 0 14%, transparent 14.2%),
-    radial-gradient(circle at 86% 82%, var(--pink) 0 14%, transparent 14.2%),
+    radial-gradient(circle at 8% 18%, rgba(168, 216, 238, 0.6), transparent 16%),
+    radial-gradient(circle at 92% 12%, rgba(248, 191, 114, 0.55), transparent 14%),
+    radial-gradient(circle at 86% 82%, rgba(244, 203, 208, 0.55), transparent 14%),
     var(--tan);
   opacity: 0;
   pointer-events: none;
   transform: translateY(-100%);
   transition:
-    transform 0.75s cubic-bezier(.76, 0, .24, 1),
-    opacity 0.4s ease;
+    transform 0.8s cubic-bezier(.76, 0, .24, 1),
+    opacity 0.45s ease;
+  overflow: hidden;
+}
+
+.transition-curtain::before,
+.transition-curtain::after {
+  content: "";
+  position: absolute;
+  filter: blur(1px);
+  opacity: 0.92;
+}
+
+.transition-curtain::before {
+  width: 34vw;
+  height: 28vw;
+  min-width: 240px;
+  min-height: 200px;
+  max-width: 540px;
+  max-height: 440px;
+  top: -10vh;
+  left: -10vw;
+  background: var(--blue-soft);
+  border-radius: 59% 41% 46% 54% / 47% 35% 65% 53%;
+}
+
+.transition-curtain::after {
+  width: 30vw;
+  height: 25vw;
+  min-width: 220px;
+  min-height: 190px;
+  max-width: 480px;
+  max-height: 400px;
+  right: -8vw;
+  bottom: -10vh;
+  background: linear-gradient(135deg, var(--peach), var(--pink));
+  border-radius: 42% 58% 64% 36% / 56% 37% 63% 44%;
 }
 
 body.is-transitioning .page-stage {
@@ -392,26 +484,135 @@ body.is-transitioning .transition-curtain {
   transform: translateY(0);
 }
 
-.transition-curtain::before,
-.transition-curtain::after {
-  content: "";
-  position: absolute;
-  width: 26px;
-  height: 26px;
-  border-color: rgba(36, 103, 131, 0.58);
-  border-style: solid;
+body.is-transitioning .transition-curtain::before {
+  animation:
+    curtainBlobOne 1.05s cubic-bezier(.76, 0, .24, 1) forwards,
+    blobMorphOne 8s ease-in-out infinite;
 }
 
-.transition-curtain::before {
-  top: 2rem;
-  left: 2rem;
-  border-width: 3px 0 0 3px;
+body.is-transitioning .transition-curtain::after {
+  animation:
+    curtainBlobTwo 1.05s cubic-bezier(.76, 0, .24, 1) forwards,
+    blobMorphTwo 7s ease-in-out infinite;
 }
 
-.transition-curtain::after {
-  right: 2rem;
-  bottom: 2rem;
-  border-width: 0 3px 3px 0;
+/* Blob motion */
+
+@keyframes blobMorphOne {
+  0%, 100% {
+    border-radius: 62% 38% 48% 52% / 52% 34% 66% 48%;
+  }
+  25% {
+    border-radius: 48% 52% 36% 64% / 43% 59% 41% 57%;
+  }
+  50% {
+    border-radius: 56% 44% 59% 41% / 64% 39% 61% 36%;
+  }
+  75% {
+    border-radius: 40% 60% 52% 48% / 51% 67% 33% 49%;
+  }
+}
+
+@keyframes blobMorphTwo {
+  0%, 100% {
+    border-radius: 42% 58% 67% 33% / 44% 39% 61% 56%;
+  }
+  33% {
+    border-radius: 58% 42% 47% 53% / 36% 62% 38% 64%;
+  }
+  66% {
+    border-radius: 36% 64% 57% 43% / 58% 42% 58% 42%;
+  }
+}
+
+@keyframes blobMorphThree {
+  0%, 100% {
+    border-radius: 58% 42% 65% 35% / 52% 64% 36% 48%;
+  }
+  50% {
+    border-radius: 44% 56% 38% 62% / 64% 38% 62% 36%;
+  }
+}
+
+@keyframes blobMorphFour {
+  0%, 100% {
+    border-radius: 38% 62% 44% 56% / 60% 40% 60% 40%;
+  }
+  50% {
+    border-radius: 60% 40% 59% 41% / 43% 57% 43% 57%;
+  }
+}
+
+@keyframes blobMorphMini {
+  0%, 100% {
+    border-radius: 61% 39% 65% 35% / 58% 43% 57% 42%;
+  }
+  50% {
+    border-radius: 42% 58% 44% 56% / 36% 64% 36% 64%;
+  }
+}
+
+@keyframes blobFloatOne {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+  }
+  100% {
+    transform: translate3d(4vw, 3vh, 0) rotate(8deg) scale(1.08);
+  }
+}
+
+@keyframes blobFloatTwo {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+  }
+  100% {
+    transform: translate3d(-3vw, -3vh, 0) rotate(-10deg) scale(1.06);
+  }
+}
+
+@keyframes blobDriftThree {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(-6deg) scale(1);
+  }
+  100% {
+    transform: translate3d(3vw, 2vh, 0) rotate(8deg) scale(1.08);
+  }
+}
+
+@keyframes blobDriftFour {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(4deg) scale(1);
+  }
+  100% {
+    transform: translate3d(-2vw, -2vh, 0) rotate(-8deg) scale(1.07);
+  }
+}
+
+@keyframes blobWobbleMini {
+  0% {
+    transform: rotate(-8deg) translateY(0);
+  }
+  100% {
+    transform: rotate(4deg) translateY(8px);
+  }
+}
+
+@keyframes curtainBlobOne {
+  0% {
+    transform: translate3d(-4vw, -8vh, 0) scale(0.96) rotate(-8deg);
+  }
+  100% {
+    transform: translate3d(2vw, 4vh, 0) scale(1.12) rotate(10deg);
+  }
+}
+
+@keyframes curtainBlobTwo {
+  0% {
+    transform: translate3d(5vw, 8vh, 0) scale(0.94) rotate(6deg);
+  }
+  100% {
+    transform: translate3d(-2vw, -4vh, 0) scale(1.1) rotate(-10deg);
+  }
 }
 
 /* Mobile */
