@@ -612,3 +612,78 @@ body.is-transitioning .transition-curtain {
   position: fixed;
   z-index: 9998;
 }
+
+/* Mission statement rotator */
+
+.mission-rotator-section {
+  position: relative;
+  margin: 2rem 0 2.5rem;
+  padding: 1.4rem 1.5rem;
+  max-width: 760px;
+  min-height: 170px;
+  background: rgba(255, 250, 246, 0.58);
+  border: 2px solid rgba(36, 103, 131, 0.13);
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(36, 103, 131, 0.08);
+}
+
+.mission-rotator-section::before {
+  content: "";
+  position: absolute;
+  width: 140px;
+  height: 110px;
+  right: -35px;
+  top: -35px;
+  background: var(--blue-soft);
+  border-radius: 62% 38% 48% 52% / 52% 34% 66% 48%;
+  opacity: 0.85;
+  animation: blobMorphOne 12s ease-in-out infinite;
+}
+
+.mission-rotator-section::after {
+  content: "";
+  position: absolute;
+  width: 115px;
+  height: 95px;
+  left: -25px;
+  bottom: -30px;
+  background: var(--peach);
+  border-radius: 42% 58% 67% 33% / 44% 39% 61% 56%;
+  opacity: 0.65;
+  animation: blobMorphTwo 11s ease-in-out infinite;
+}
+
+.mission-label {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 0.7rem;
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--blue);
+  font-weight: 700;
+}
+
+.mission-rotator {
+  position: relative;
+  z-index: 1;
+  min-height: 88px;
+}
+
+.mission-line {
+  position: absolute;
+  inset: 0 auto auto 0;
+  max-width: 680px;
+  font-family: var(--font-body);
+  font-size: clamp(1.45rem, 3vw, 2.65rem);
+  line-height: 1.05;
+  color: var(--blue-dark);
+  font-weight: 900;
+  visibility: hidden;
+}
+
+.line-wrapper {
+  overflow: hidden;
+}
