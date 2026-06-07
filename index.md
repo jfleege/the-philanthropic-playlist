@@ -19,5 +19,6 @@ title: Home
 <div class="home-actions">
   <a href="about.html">Learn More</a>
   <a href="events.html">View Events</a>
+  <a href="impact.html">See the Impact</a>
   <a href="team.html">Meet the Team</a>
 </div>
