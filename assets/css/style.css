@@ -603,15 +603,12 @@ body.is-transitioning .transition-curtain {
   transition: border-radius 0.25s ease;
 }
 
-.page-stage,
-.transition-curtain {
-  position: relative;
-}
-
 .page-stage {
+  position: relative;
   z-index: 2;
 }
 
 .transition-curtain {
+  position: fixed;
   z-index: 9998;
 }
