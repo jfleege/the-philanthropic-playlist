@@ -813,53 +813,55 @@ body.is-transitioning .transition-curtain {
 }
 
 /* =========================================================
-   18. About Floating Boxes
+  18. About Cards: Continuous Floating Motion
 ========================================================= */
-
-.about-connector-path {
-  fill: none;
-  stroke: rgba(36, 103, 131, 0.22);
-  stroke-width: 4;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-dasharray: 4 16;
-}
-
-.about-connector-dot {
-  fill: var(--blue);
-  opacity: 0.22;
-}
 
 .about-block {
   animation: aboutCardFloat 7s ease-in-out infinite;
   will-change: transform;
 }
 
-.about-block.align-left {
-  animation-delay: -1.2s;
+/* Offset timing so all cards float together, but not in sync */
+.about-block:nth-of-type(1) {
+  animation-delay: 0s;
 }
 
-.about-block.align-right {
-  animation-delay: -3.6s;
+.about-block:nth-of-type(2) {
+  animation-delay: -1.4s;
 }
 
+.about-block:nth-of-type(3) {
+  animation-delay: -2.8s;
+}
+
+.about-block:nth-of-type(4) {
+  animation-delay: -4.2s;
+}
+
+.about-block:nth-of-type(5) {
+  animation-delay: -5.6s;
+}
+
+/* Keep the highlight effect, but do NOT stop the float animation */
 .about-block.is-connected {
-  animation: none;
-  transform: translateY(-8px) scale(1.01);
   background: rgba(255, 250, 246, 0.84);
   box-shadow: 0 22px 56px rgba(36, 103, 131, 0.16);
 }
 
+/* Subtle universal floating movement */
 @keyframes aboutCardFloat {
   0%, 100% {
     transform: translateY(0px);
   }
+
   25% {
     transform: translateY(-4px);
   }
+
   50% {
     transform: translateY(-8px);
   }
+
   75% {
     transform: translateY(-3px);
   }
