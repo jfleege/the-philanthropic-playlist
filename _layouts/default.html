@@ -34,15 +34,17 @@
         {{ content }}
       </main>
 
-      <section class="feature-panel">
-        <div class="feature-card">
-          <p class="feature-label">Featured</p>
-          <h2>End-of-Semester Performance</h2>
-          <p>
-            Music with a mission. Join us as we perform member-voted selections and raise funds for meaningful causes.
-          </p>
-        </div>
-      </section>
+      {% unless page.hide_feature %}
+<section class="feature-panel">
+  <div class="feature-card">
+    <p class="feature-label">Featured</p>
+    <h2>End-of-Semester Performance</h2>
+    <p>
+      Music with a mission. Join us as we perform member-voted selections and raise funds for meaningful causes.
+    </p>
+  </div>
+</section>
+{% endunless %}
 
       <footer class="bottom-bar">
         <div class="contact-links">

@@ -730,3 +730,89 @@ body.is-transitioning .transition-curtain {
 .home-actions a {
   margin-top: 0;
 }
+
+/* About page alternating layout */
+
+.about-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  margin-top: 2.5rem;
+  padding-bottom: 4rem;
+}
+
+.about-block {
+  position: relative;
+  max-width: 760px;
+  padding: 2rem;
+  background: rgba(255, 250, 246, 0.58);
+  border: 2px solid rgba(36, 103, 131, 0.13);
+  border-radius: 30px;
+  box-shadow: 0 14px 36px rgba(36, 103, 131, 0.08);
+}
+
+.about-block.align-left {
+  align-self: flex-start;
+}
+
+.about-block.align-right {
+  align-self: flex-end;
+}
+
+.about-kicker {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blue);
+  font-weight: 700;
+}
+
+.about-block h2 {
+  margin: 0 0 1rem;
+  color: var(--blue-dark);
+  font-size: clamp(1.8rem, 3.2vw, 3rem);
+  line-height: 1.05;
+}
+
+.about-block p {
+  color: var(--blue-dark);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.about-block::before {
+  content: "";
+  position: absolute;
+  width: 95px;
+  height: 75px;
+  background: var(--blue-soft);
+  border-radius: 58% 42% 65% 35% / 52% 64% 36% 48%;
+  opacity: 0.55;
+  z-index: -1;
+}
+
+.about-block.align-left::before {
+  right: -36px;
+  top: -24px;
+}
+
+.about-block.align-right::before {
+  left: -36px;
+  bottom: -24px;
+  background: var(--peach);
+}
+
+@media (max-width: 900px) {
+  .about-block,
+  .about-block.align-left,
+  .about-block.align-right {
+    align-self: stretch;
+    max-width: 100%;
+  }
+
+  .about-flow {
+    gap: 2rem;
+  }
+}
