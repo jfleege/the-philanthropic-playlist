@@ -843,7 +843,7 @@ body.is-transitioning .transition-curtain {
 .about-flow {
   display: flex;
   flex-direction: column;
-  gap: 5.5rem;
+  gap: 3rem;
   width: 100%;
   margin-top: 2rem;
   padding-bottom: 5rem;
