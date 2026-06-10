@@ -13,7 +13,7 @@
   <div class="transition-curtain"></div>
 
   <div class="page-stage">
-    <div class="site-frame">
+    <div class="site-frame {% if page.hide_feature %}no-feature{% endif %}">
       <aside class="sidebar">
         <a href="{{ '/' | relative_url }}" class="brand">PP</a>
 
