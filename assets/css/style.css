@@ -929,3 +929,24 @@ body.is-transitioning .transition-curtain {
     gap: 2rem;
   }
 }
+
+/* Make About blocks much wider */
+
+.site-frame.no-feature .main-content {
+  max-width: 1450px;
+  width: 100%;
+  align-self: start;
+}
+
+.about-block {
+  width: min(1050px, 100%);
+  padding: 2.25rem 2.75rem;
+}
+
+.about-block.align-left {
+  align-self: flex-start;
+}
+
+.about-block.align-right {
+  align-self: flex-end;
+}
