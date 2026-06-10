@@ -1018,3 +1018,27 @@ body.is-transitioning .transition-curtain {
     transform: none;
   }
 }
+
+/* Final About page cleanup */
+
+.about-block::before,
+.about-block::after,
+.site-frame::before,
+.site-frame::after {
+  display: none !important;
+}
+
+.about-connector-path {
+  stroke: rgba(36, 103, 131, 0.22);
+  stroke-width: 3;
+  stroke-dasharray: 8 18;
+}
+
+.about-connector-dot {
+  fill: var(--blue);
+  opacity: 0.32;
+}
+
+.about-block.is-connected::after {
+  display: none !important;
+}
