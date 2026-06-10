@@ -851,7 +851,7 @@ body.is-transitioning .transition-curtain {
 
 .about-block {
   position: relative;
-  width: min(1000px, 100%);
+  width: min(1600, 100%);
   padding: 2rem 2.25rem;
   background: rgba(255, 250, 246, 0.62);
   border: 2px solid rgba(36, 103, 131, 0.14);
