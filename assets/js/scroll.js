@@ -151,4 +151,123 @@ document.addEventListener("DOMContentLoaded", () => {
 
     resizeObserver.observe(document.body);
   }
+
+  /*
+  About page connected path animation
+*/
+const initAboutConnector = () => {
+  if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
+
+  const aboutFlow = document.querySelector(".about-flow");
+  if (!aboutFlow) return;
+
+  const blocks = Array.from(aboutFlow.querySelectorAll(".about-block"));
+  if (blocks.length < 2) return;
+
+  let svg = aboutFlow.querySelector(".about-connector-svg");
+
+  if (!svg) {
+    svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.classList.add("about-connector-svg");
+
+    const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    path.classList.add("about-connector-path");
+
+    svg.appendChild(path);
+    aboutFlow.prepend(svg);
+  }
+
+  const path = svg.querySelector(".about-connector-path");
+
+  const buildPath = () => {
+    const flowRect = aboutFlow.getBoundingClientRect();
+
+    const points = blocks.map((block, index) => {
+      const rect = block.getBoundingClientRect();
+
+      const isLeft = block.classList.contains("align-left");
+
+      const x = isLeft
+        ? rect.right - flowRect.left - 80
+        : rect.left - flowRect.left + 80;
+
+      const y = rect.top - flowRect.top + rect.height / 2;
+
+      return { x, y };
+    });
+
+    let d = `M ${points[0].x} ${points[0].y}`;
+
+    for (let i = 1; i < points.length; i++) {
+      const previous = points[i - 1];
+      const current = points[i];
+
+      const midY = (previous.y + current.y) / 2;
+
+      d += ` C ${previous.x} ${midY}, ${current.x} ${midY}, ${current.x} ${current.y}`;
+    }
+
+    path.setAttribute("d", d);
+
+    svg.querySelectorAll(".about-connector-dot").forEach((dot) => dot.remove());
+
+    points.forEach((point) => {
+      const dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+      dot.classList.add("about-connector-dot");
+      dot.setAttribute("cx", point.x);
+      dot.setAttribute("cy", point.y);
+      dot.setAttribute("r", "7");
+      svg.appendChild(dot);
+    });
+
+    const pathLength = path.getTotalLength();
+
+    gsap.set(path, {
+      strokeDasharray: pathLength,
+      strokeDashoffset: pathLength
+    });
+
+    ScrollTrigger.getAll().forEach((trigger) => {
+      if (trigger.vars && trigger.vars.id === "about-connector") {
+        trigger.kill();
+      }
+    });
+
+    gsap.to(path, {
+      strokeDashoffset: 0,
+      ease: "none",
+      scrollTrigger: {
+        id: "about-connector",
+        trigger: aboutFlow,
+        start: "top 70%",
+        end: "bottom 65%",
+        scrub: 1
+      }
+    });
+
+    blocks.forEach((block) => {
+      ScrollTrigger.create({
+        trigger: block,
+        start: "top 65%",
+        end: "bottom 45%",
+        toggleClass: {
+          targets: block,
+          className: "is-connected"
+        }
+      });
+    });
+  };
+
+  buildPath();
+
+  window.addEventListener(
+    "resize",
+    debounce(() => {
+      buildPath();
+      ScrollTrigger.refresh();
+    }, 300)
+  );
+};
+
+initAboutConnector();
 });
