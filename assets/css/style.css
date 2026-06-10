@@ -19,6 +19,7 @@
    15. Animations
    16. Responsive Styles
    17. Reduced Motion
+   18. About Floating Boxes
 ========================================================= */
 
 
@@ -652,16 +653,16 @@ body.is-transitioning .transition-curtain {
 
 .about-connector-path {
   fill: none;
-  stroke: rgba(36, 103, 131, 0.26);
+  stroke: rgba(36, 103, 131, 0.22);
   stroke-width: 4;
   stroke-linecap: round;
   stroke-linejoin: round;
-  stroke-dasharray: 3 18;
+  stroke-dasharray: 4 16;
 }
 
 .about-connector-dot {
   fill: var(--blue);
-  opacity: 0.26;
+  opacity: 0.22;
 }
 
 
@@ -808,5 +809,58 @@ body.is-transitioning .transition-curtain {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
+  }
+}
+
+/* =========================================================
+   18. About Floating Boxes
+========================================================= */
+
+.about-connector-path {
+  fill: none;
+  stroke: rgba(36, 103, 131, 0.22);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 4 16;
+}
+
+.about-connector-dot {
+  fill: var(--blue);
+  opacity: 0.22;
+}
+
+.about-block {
+  animation: aboutCardFloat 7s ease-in-out infinite;
+  will-change: transform;
+}
+
+.about-block.align-left {
+  animation-delay: -1.2s;
+}
+
+.about-block.align-right {
+  animation-delay: -3.6s;
+}
+
+.about-block.is-connected {
+  animation: none;
+  transform: translateY(-8px) scale(1.01);
+  background: rgba(255, 250, 246, 0.84);
+  box-shadow: 0 22px 56px rgba(36, 103, 131, 0.16);
+}
+
+@keyframes aboutCardFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(-4px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  75% {
+    transform: translateY(-3px);
   }
 }

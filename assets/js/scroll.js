@@ -196,27 +196,26 @@ const initAboutConnector = () => {
       return { x, y };
     });
 
-    let d = `M ${points[0].x} ${points[0].y}`;
+   let d = `M ${points[0].x} ${points[0].y}`;
 
 for (let i = 1; i < points.length; i++) {
   const previous = points[i - 1];
   const current = points[i];
 
-  const verticalDistance = current.y - previous.y;
-  const curveAmount = Math.min(360, Math.max(180, Math.abs(verticalDistance) * 0.55));
+  const dx = current.x - previous.x;
+  const dy = current.y - previous.y;
 
-  const previousLeansLeft = previous.x < current.x;
+  const direction = dx >= 0 ? 1 : -1;
 
-  const controlOneX = previousLeansLeft
-    ? previous.x + curveAmount
-    : previous.x - curveAmount;
+  /* Wider horizontal swing = smoother S-curve */
+  const horizontalSwing = Math.max(140, Math.min(260, Math.abs(dx) * 0.55));
+  const verticalBend = Math.max(90, Math.min(180, Math.abs(dy) * 0.28));
 
-  const controlTwoX = previousLeansLeft
-    ? current.x - curveAmount
-    : current.x + curveAmount;
+  const controlOneX = previous.x + direction * horizontalSwing;
+  const controlOneY = previous.y + verticalBend;
 
-  const controlOneY = previous.y + verticalDistance * 0.32;
-  const controlTwoY = previous.y + verticalDistance * 0.68;
+  const controlTwoX = current.x - direction * horizontalSwing;
+  const controlTwoY = current.y - verticalBend;
 
   d += ` C ${controlOneX} ${controlOneY}, ${controlTwoX} ${controlTwoY}, ${current.x} ${current.y}`;
 }
