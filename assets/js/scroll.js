@@ -198,16 +198,30 @@ const initAboutConnector = () => {
 
     let d = `M ${points[0].x} ${points[0].y}`;
 
-    for (let i = 1; i < points.length; i++) {
-      const previous = points[i - 1];
-      const current = points[i];
+for (let i = 1; i < points.length; i++) {
+  const previous = points[i - 1];
+  const current = points[i];
 
-      const midY = (previous.y + current.y) / 2;
+  const verticalDistance = current.y - previous.y;
+  const curveAmount = Math.min(360, Math.max(180, Math.abs(verticalDistance) * 0.55));
 
-      d += ` C ${previous.x} ${midY}, ${current.x} ${midY}, ${current.x} ${current.y}`;
-    }
+  const previousLeansLeft = previous.x < current.x;
 
-    path.setAttribute("d", d);
+  const controlOneX = previousLeansLeft
+    ? previous.x + curveAmount
+    : previous.x - curveAmount;
+
+  const controlTwoX = previousLeansLeft
+    ? current.x - curveAmount
+    : current.x + curveAmount;
+
+  const controlOneY = previous.y + verticalDistance * 0.32;
+  const controlTwoY = previous.y + verticalDistance * 0.68;
+
+  d += ` C ${controlOneX} ${controlOneY}, ${controlTwoX} ${controlTwoY}, ${current.x} ${current.y}`;
+}
+
+path.setAttribute("d", d);
 
     svg.querySelectorAll(".about-connector-dot").forEach((dot) => dot.remove());
 

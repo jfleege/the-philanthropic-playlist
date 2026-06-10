@@ -1029,7 +1029,7 @@ body.is-transitioning .transition-curtain {
 }
 
 .about-connector-path {
-  stroke: rgba(36, 103, 131, 0.22);
+  stroke: rgba(36, 103, 131, 0.7);
   stroke-width: 3;
   stroke-dasharray: 8 18;
 }
@@ -1041,4 +1041,19 @@ body.is-transitioning .transition-curtain {
 
 .about-block.is-connected::after {
   display: none !important;
+}
+
+/* More fluid About connector path */
+
+.about-connector-path {
+  stroke: rgba(36, 103, 131, 0.26);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 3 18;
+}
+
+.about-connector-dot {
+  fill: var(--blue);
+  opacity: 0.26;
 }
