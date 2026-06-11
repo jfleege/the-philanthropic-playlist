@@ -20,6 +20,7 @@
    16. Responsive Styles
    17. Reduced Motion
    18. About Floating Boxes
+   19. Floating Letters
 ========================================================= */
 
 
@@ -28,6 +29,7 @@
 ========================================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Pacifico&family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800;900&family=Pacifico&family=Space+Mono:wght@400;700&display=swap');
 
 * {
   box-sizing: border-box;
@@ -55,6 +57,13 @@
   --font-mono: 'Space Mono', monospace;
 }
 
+@font-face {
+  font-family: "Variex";
+  src: url("../fonts/variex.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* =========================================================
    2. Base Page Background
@@ -293,11 +302,11 @@ body.is-transitioning .transition-curtain {
 .main-content h1 {
   margin: 0 0 1.5rem;
   color: var(--blue);
-  font-family: var(--font-title);
+  font-family: "Variex", var(--font-title), cursive;
   font-size: clamp(4.4rem, 9vw, 9rem);
   font-weight: 400;
   line-height: 0.9;
-  letter-spacing: -0.03em;
+  letter-spacing: 0.02em;
 }
 
 /* Smaller page title on no-feature subpages */
@@ -864,5 +873,40 @@ body.is-transitioning .transition-curtain {
 
   75% {
     transform: translateY(-3px);
+  }
+}
+
+/* =========================================================
+  19. Floating Colored H1 Letters
+========================================================= */
+
+.floating-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.01em;
+}
+
+.floating-letter {
+  display: inline-block;
+  color: var(--letter-color);
+  animation: titleLetterFloat 4.8s ease-in-out infinite;
+  animation-delay: var(--float-delay);
+  transform-origin: center;
+  will-change: transform;
+}
+
+.floating-letter:hover {
+  color: var(--peach);
+  transform: translateY(-10px) rotate(4deg) scale(1.06);
+}
+
+@keyframes titleLetterFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(calc(var(--float-distance) * -1)) rotate(var(--rotate-amount));
   }
 }
