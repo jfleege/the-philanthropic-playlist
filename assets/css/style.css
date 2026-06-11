@@ -31,6 +31,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Pacifico&family=Space+Mono:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800;900&family=Pacifico&family=Space+Mono:wght@400;700&display=swap');
 
+@font-face {
+  font-family: "Variex";
+  src: url("../fonts/variex.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   box-sizing: border-box;
 }
