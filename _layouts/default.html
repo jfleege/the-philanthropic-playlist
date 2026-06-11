@@ -47,14 +47,69 @@
 {% endunless %}
 
       <footer class="bottom-bar">
-        <div class="contact-links">
-          <a href="https://tr.ee/t-r7v1qI7g" target="_blank">GroupMe ↗</a>
-          <a href="https://tr.ee/vzHsk8rVMf" target="_blank">Newsletter ↗</a>
-          <a href="https://tr.ee/T2Tzoa-vV5" target="_blank">Instagram ↗</a>
-        </div>
+  <div class="contact-links icon-links">
+    <a
+      href="https://tr.ee/t-r7v1qI7g"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Join our GroupMe"
+      class="icon-link"
+    >
+      <!-- GroupMe / chat-style icon -->
+      <svg viewBox="0 0 24 24" aria-hidden="true" class="footer-icon">
+        <path d="M4 5.5C4 4.12 5.12 3 6.5 3h11C18.88 3 20 4.12 20 5.5v7C20 13.88 18.88 15 17.5 15H10l-4.5 4v-4H6.5A2.5 2.5 0 0 1 4 12.5v-7Z" fill="currentColor"/>
+        <circle cx="9" cy="9" r="1.1" fill="var(--white)"/>
+        <circle cx="12" cy="9" r="1.1" fill="var(--white)"/>
+        <circle cx="15" cy="9" r="1.1" fill="var(--white)"/>
+      </svg>
+    </a>
 
-        <p>University of Illinois · Philanthropic Playlist</p>
-      </footer>
+    <a
+      href="https://tr.ee/vzHsk8rVMf"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Join our Newsletter"
+      class="icon-link"
+    >
+      <!-- Envelope / newsletter icon -->
+      <svg viewBox="0 0 24 24" aria-hidden="true" class="footer-icon">
+        <path d="M3 6.5A2.5 2.5 0 0 1 5.5 4h13A2.5 2.5 0 0 1 21 6.5v11a2.5 2.5 0 0 1-2.5 2.5h-13A2.5 2.5 0 0 1 3 17.5v-11Z" fill="none" stroke="currentColor" stroke-width="2"/>
+        <path d="M4.5 7.5 12 13l7.5-5.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+
+    <a
+      href="https://tr.ee/T2Tzoa-vV5"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Follow us on Instagram"
+      class="icon-link"
+    >
+      <!-- Instagram icon -->
+      <svg viewBox="0 0 24 24" aria-hidden="true" class="footer-icon">
+        <rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+        <circle cx="17.2" cy="6.8" r="1.2" fill="currentColor"/>
+      </svg>
+    </a>
+  </div>
+
+  <div class="footer-brand-lockup">
+    <img
+      src="{{ '/assets/images/uiuc.png' | relative_url }}"
+      alt="University of Illinois block I"
+      class="footer-school-logo"
+    >
+
+    <span class="footer-divider-x">×</span>
+
+    <img
+      src="{{ '/assets/images/pp.png' | relative_url }}"
+      alt="Philanthropic Playlist logo"
+      class="footer-rso-logo"
+    >
+  </div>
+</footer>
     </div>
   </div>
 
