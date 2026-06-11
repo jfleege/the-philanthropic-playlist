@@ -1183,3 +1183,53 @@ body.is-transitioning .transition-curtain {
   display: block;
   object-fit: contain;
 }
+
+/* =========================================================
+  OVERRIDE: Footer Size Increase
+========================================================= */
+
+.bottom-bar {
+  min-height: 92px;
+  padding-top: 1.35rem;
+  padding-bottom: 0.35rem;
+  align-items: center;
+}
+
+.icon-links {
+  gap: 1.2rem;
+}
+
+.icon-link {
+  width: 68px;
+  height: 68px;
+}
+
+.footer-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.footer-icon-img {
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+}
+
+.footer-brand-lockup {
+  gap: 1rem;
+}
+
+.footer-school-logo {
+  height: 44px;
+  width: auto;
+}
+
+.footer-divider-x {
+  font-size: 1.45rem;
+}
+
+.footer-rso-logo {
+  height: 48px;
+  width: auto;
+  max-width: 300px;
+}
