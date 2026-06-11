@@ -934,3 +934,18 @@ body.is-transitioning .transition-curtain {
   font-size: clamp(5rem, 11vw, 11rem);
   line-height: 0.78;
 }
+
+/* Make Comforter Brush title look thicker */
+
+.main-content h1,
+.floating-title,
+.floating-letter {
+  font-family: "Comforter Brush", cursive;
+  font-weight: 400;
+  -webkit-text-stroke: 1px var(--blue);
+  text-shadow:
+    0.7px 0 var(--blue),
+    -0.7px 0 var(--blue),
+    0 0.7px var(--blue),
+    0 -0.7px var(--blue);
+}
