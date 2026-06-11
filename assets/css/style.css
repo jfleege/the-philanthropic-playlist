@@ -918,3 +918,20 @@ body.is-transitioning .transition-curtain {
     transform: translateY(calc(var(--float-distance) * -1)) rotate(var(--rotate-amount));
   }
 }
+
+/* =========================================================
+  OVERRIDE: Floating H1: Chunky Playful Font Override
+========================================================= */
+
+.main-content h1,
+.floating-title,
+.floating-letter {
+  font-family: "DynaPuff", "Nunito", Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.main-content h1 {
+  font-size: clamp(3.8rem, 8vw, 8rem);
+  line-height: 0.95;
+}
