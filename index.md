@@ -3,8 +3,6 @@ layout: default
 title: Home
 ---
 
-# Philanthropic Playlist
-
 <div class="home-title-wrap">
   <h1>Philanthropic<br>Playlist</h1>
 
