@@ -12,23 +12,47 @@ document.addEventListener("DOMContentLoaded", () => {
   titles.forEach((title) => {
     if (title.dataset.floatingTitle === "true") return;
 
-    const text = title.textContent.trim();
+    const lines = title.innerText
+      .trim()
+      .split("\n")
+      .map((line) => line.trim())
+      .filter(Boolean);
+
     title.textContent = "";
     title.dataset.floatingTitle = "true";
     title.classList.add("floating-title");
 
-    [...text].forEach((char, index) => {
-      const span = document.createElement("span");
+    let letterIndex = 0;
 
-      span.textContent = char === " " ? "\u00A0" : char;
-      span.className = "floating-letter";
+    lines.forEach((lineText) => {
+      const line = document.createElement("span");
+      line.className = "floating-title-line";
 
-      span.style.setProperty("--letter-color", colors[index % colors.length]);
-      span.style.setProperty("--float-delay", `${index * -0.13}s`);
-      span.style.setProperty("--float-distance", `${4 + (index % 4) * 2}px`);
-      span.style.setProperty("--rotate-amount", `${index % 2 === 0 ? 2 : -2}deg`);
+      const words = lineText.split(" ");
 
-      title.appendChild(span);
+      words.forEach((wordText) => {
+        const word = document.createElement("span");
+        word.className = "floating-word";
+
+        [...wordText].forEach((char) => {
+          const letter = document.createElement("span");
+
+          letter.textContent = char;
+          letter.className = "floating-letter";
+
+          letter.style.setProperty("--letter-color", colors[letterIndex % colors.length]);
+          letter.style.setProperty("--float-delay", `${letterIndex * -0.11}s`);
+          letter.style.setProperty("--float-distance", `${4 + (letterIndex % 4) * 2}px`);
+          letter.style.setProperty("--rotate-amount", `${letterIndex % 2 === 0 ? 2 : -2}deg`);
+
+          word.appendChild(letter);
+          letterIndex++;
+        });
+
+        line.appendChild(word);
+      });
+
+      title.appendChild(line);
     });
   });
 });

@@ -890,18 +890,37 @@ body.is-transitioning .transition-curtain {
 
 .floating-title {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.04em;
+}
+
+.floating-title-line {
+  display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  gap: 0.01em;
+  column-gap: 0.18em;
+  row-gap: 0;
+}
+
+.floating-word {
+  display: inline-flex;
+  white-space: nowrap;
 }
 
 .floating-letter {
   display: inline-block;
   color: var(--letter-color);
-  animation: titleLetterFloat 4.8s ease-in-out infinite;
+  animation: titleLetterFloat 6s ease-in-out infinite;
   animation-delay: var(--float-delay);
   transform-origin: center;
   will-change: transform;
+  -webkit-text-stroke: 0.8px var(--letter-color);
+  text-shadow:
+    0.6px 0 var(--letter-color),
+    -0.6px 0 var(--letter-color),
+    0 0.6px var(--letter-color),
+    0 -0.6px var(--letter-color);
 }
 
 .floating-letter:hover {
