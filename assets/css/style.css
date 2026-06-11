@@ -21,6 +21,7 @@
    17. Reduced Motion
    18. About Floating Boxes
    19. Floating Letters
+   20. Home Page Floating Music Notes
 ========================================================= */
 
 
@@ -948,4 +949,110 @@ body.is-transitioning .transition-curtain {
     -0.7px 0 var(--blue),
     0 0.7px var(--blue),
     0 -0.7px var(--blue);
+}
+
+/* =========================================================
+  20. Home Page Floating Music Notes
+========================================================= */
+
+.home-title-wrap {
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+}
+
+.music-notes {
+  position: absolute;
+  right: -120px;
+  bottom: 35px;
+  width: 140px;
+  height: 140px;
+  pointer-events: none;
+}
+
+.music-note {
+  position: absolute;
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 900;
+  line-height: 1;
+  opacity: 0.95;
+  will-change: transform;
+  animation: musicNoteFloat 5.5s ease-in-out infinite;
+}
+
+.note-1 {
+  top: 12px;
+  left: 8px;
+  font-size: 2rem;
+  color: var(--blue);
+  animation-delay: 0s;
+}
+
+.note-2 {
+  top: 48px;
+  left: 52px;
+  font-size: 2.5rem;
+  color: var(--peach);
+  animation-delay: -1.3s;
+}
+
+.note-3 {
+  top: 84px;
+  left: 16px;
+  font-size: 1.8rem;
+  color: var(--blue-soft);
+  animation-delay: -2.2s;
+}
+
+.note-4 {
+  top: 20px;
+  left: 88px;
+  font-size: 2.1rem;
+  color: var(--pink);
+  animation-delay: -3.1s;
+}
+
+@keyframes musicNoteFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-6px) rotate(-4deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(3deg);
+  }
+  75% {
+    transform: translateY(-5px) rotate(-2deg);
+  }
+}
+
+/* Mobile adjustment */
+@media (max-width: 900px) {
+  .music-notes {
+    right: -40px;
+    bottom: 10px;
+    width: 90px;
+    height: 90px;
+  }
+
+  .note-1 {
+    font-size: 1.5rem;
+  }
+
+  .note-2 {
+    font-size: 1.8rem;
+    left: 38px;
+  }
+
+  .note-3 {
+    font-size: 1.35rem;
+    top: 60px;
+  }
+
+  .note-4 {
+    font-size: 1.55rem;
+    left: 64px;
+  }
 }
