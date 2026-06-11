@@ -31,7 +31,7 @@
 ========================================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Pacifico&family=Space+Mono:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&family=Nunito:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Palette+Mosaic&family=Nunito:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap');
 
 @font-face {
   font-family: "Variex";
@@ -62,7 +62,7 @@
   --soft-line: rgba(36, 103, 131, 0.13);
   --card-bg: rgba(255, 250, 246, 0.62);
 
-  --font-title: 'Metal Mania', cursive;
+  --font-title: 'Palette Mosaic', system-ui, sans-serif;
   --font-body: 'Nunito', Arial, sans-serif;
   --font-mono: 'Space Mono', monospace;
 }
@@ -952,15 +952,15 @@ body.is-transitioning .transition-curtain {
 .floating-title-line,
 .floating-word,
 .floating-letter {
-  font-family: "Metal Mania", cursive;
+  font-family: "Palette Mosaic", system-ui, sans-serif;
   font-weight: 400;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
+  text-transform: none;
+  letter-spacing: 0.035em;
 }
 
 .main-content h1 {
-  font-size: clamp(4.3rem, 8.5vw, 9rem);
-  line-height: 0.9;
+  font-size: clamp(3.7rem, 7.8vw, 8rem);
+  line-height: 0.95;
 }
 
 /* =========================================================
