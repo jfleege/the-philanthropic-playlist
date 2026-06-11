@@ -5,6 +5,17 @@ title: Home
 
 # Philanthropic Playlist
 
+<div class="home-title-wrap">
+  <h1>Philanthropic<br>Playlist</h1>
+
+  <div class="music-notes" aria-hidden="true">
+    <span class="music-note note-1">♪</span>
+    <span class="music-note note-2">♫</span>
+    <span class="music-note note-3">♩</span>
+    <span class="music-note note-4">♬</span>
+  </div>
+</div>
+
 <section class="mission-rotator-section">
   <p class="mission-label">Our Mission:</p>
 
