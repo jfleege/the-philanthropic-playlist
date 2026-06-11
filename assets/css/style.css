@@ -941,7 +941,7 @@ body.is-transitioning .transition-curtain {
 .floating-title,
 .floating-letter {
   font-family: "Comforter Brush", cursive;
-  font-weight: 400;
+  font-weight: 600;
   -webkit-text-stroke: 1px var(--blue);
   text-shadow:
     0.7px 0 var(--blue),
