@@ -887,6 +887,41 @@ body.is-transitioning .transition-curtain {
   19. Floating Colored H1 Letters
 ========================================================= */
 
+.floating-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.01em;
+}
+
+.floating-letter {
+  display: inline-block;
+  color: var(--letter-color);
+  animation: titleLetterFloat 4.8s ease-in-out infinite;
+  animation-delay: var(--float-delay);
+  transform-origin: center;
+  will-change: transform;
+}
+
+.floating-letter:hover {
+  color: var(--peach);
+  transform: translateY(-10px) rotate(4deg) scale(1.06);
+}
+
+@keyframes titleLetterFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(calc(var(--float-distance) * -1)) rotate(var(--rotate-amount));
+  }
+}
+
+/* =========================================================
+  OVERRIDE: Floating H1: Chunky Playful Font Override
+========================================================= */
+
 .main-content h1,
 .floating-title,
 .floating-letter {
@@ -898,18 +933,4 @@ body.is-transitioning .transition-curtain {
 .main-content h1 {
   font-size: clamp(5rem, 11vw, 11rem);
   line-height: 0.78;
-}
-
-.floating-letter {
-  animation: titleLetterFloat 6s ease-in-out infinite;
-}
-
-@keyframes titleLetterFloat {
-  0%, 100% {
-    transform: translateY(0) rotate(0deg);
-  }
-
-  50% {
-    transform: translateY(-5px) rotate(var(--rotate-amount));
-  }
 }
