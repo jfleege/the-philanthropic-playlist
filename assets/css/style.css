@@ -29,8 +29,7 @@
 ========================================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Pacifico&family=Space+Mono:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800;900&family=Pacifico&family=Space+Mono:wght@400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Nunito:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap');
 @font-face {
   font-family: "Variex";
   src: url("../fonts/variex.woff2") format("woff2");
@@ -60,7 +59,7 @@
   --soft-line: rgba(36, 103, 131, 0.13);
   --card-bg: rgba(255, 250, 246, 0.62);
 
-  --font-title: 'Pacifico', cursive;
+  --font-title: 'Comforter Brush', cursive;
   --font-body: 'Nunito', Arial, sans-serif;
   --font-mono: 'Space Mono', monospace;
 }
@@ -888,25 +887,21 @@ body.is-transitioning .transition-curtain {
   19. Floating Colored H1 Letters
 ========================================================= */
 
-.floating-title {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.01em;
+.main-content h1,
+.floating-title,
+.floating-letter {
+  font-family: var(--font-title);
+  font-weight: 400;
+  letter-spacing: 0.005em;
+}
+
+.main-content h1 {
+  font-size: clamp(5rem, 11vw, 11rem);
+  line-height: 0.78;
 }
 
 .floating-letter {
-  display: inline-block;
-  color: var(--letter-color);
-  animation: titleLetterFloat 4.8s ease-in-out infinite;
-  animation-delay: var(--float-delay);
-  transform-origin: center;
-  will-change: transform;
-}
-
-.floating-letter:hover {
-  color: var(--peach);
-  transform: translateY(-10px) rotate(4deg) scale(1.06);
+  animation: titleLetterFloat 6s ease-in-out infinite;
 }
 
 @keyframes titleLetterFloat {
@@ -915,23 +910,6 @@ body.is-transitioning .transition-curtain {
   }
 
   50% {
-    transform: translateY(calc(var(--float-distance) * -1)) rotate(var(--rotate-amount));
+    transform: translateY(-5px) rotate(var(--rotate-amount));
   }
-}
-
-/* =========================================================
-  OVERRIDE: Floating H1: Chunky Playful Font Override
-========================================================= */
-
-.main-content h1,
-.floating-title,
-.floating-letter {
-  font-family: "DynaPuff", "Nunito", Arial, sans-serif;
-  font-weight: 700;
-  letter-spacing: 0.01em;
-}
-
-.main-content h1 {
-  font-size: clamp(3.8rem, 8vw, 8rem);
-  line-height: 0.95;
 }
