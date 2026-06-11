@@ -1176,3 +1176,10 @@ body.is-transitioning .transition-curtain {
     justify-content: flex-start;
   }
 }
+
+.footer-icon-img {
+  width: 26px;
+  height: 26px;
+  display: block;
+  object-fit: contain;
+}
