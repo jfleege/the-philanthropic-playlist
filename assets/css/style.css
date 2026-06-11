@@ -253,7 +253,7 @@ body.is-transitioning .transition-curtain {
   background: var(--blue);
   text-decoration: none;
   font-family: var(--font-body);
-  font-size: 1.35rem;
+  font-size: 1.5rem;
   font-weight: 900;
   border-radius: 50%;
   box-shadow: 0 8px 20px rgba(36, 103, 131, 0.18);
