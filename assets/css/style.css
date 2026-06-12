@@ -390,7 +390,7 @@ body.is-transitioning .transition-curtain {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 8rem;
+  padding-top: 20rem;
 }
 
 .feature-card {
