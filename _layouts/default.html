@@ -36,11 +36,23 @@
 
       {% unless page.hide_feature %}
 <section class="feature-panel">
-  <div class="feature-card">
-    <p class="feature-label">Featured</p>
-    <h2>End-of-Semester Performance</h2>
-    <p>
-      This past semester, members of the Philanthropic Playlist performed at Presby Hall to raise donations for local charity.
+  <div class="feature-card performance-card">
+    <div class="performance-image-wrap">
+      <img
+        src="{{ '/assets/images/IMG_4556.jpeg' | relative_url }}"
+        alt="Philanthropic Playlist recent performance"
+        class="performance-image"
+      >
+    </div>
+
+    <div class="performance-card-content">
+      <p class="feature-label">Recent Performance</p>
+      <h2>Our Latest Show</h2>
+      <p>
+        This past semester, the members of the Philanthropic Playlist gathered to perform at Presby Hall to fundraise for local charity.
+      </p>
+    </div>
+  </div>
 </section>
 {% endunless %}
 
