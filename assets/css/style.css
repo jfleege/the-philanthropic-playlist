@@ -1302,10 +1302,9 @@ body.is-transitioning .transition-curtain {
 ========================================================= */
 
 .brand-image-link {
-  padding: 0;
+  padding: 0.6rem;
   overflow: hidden;
-  background: transparent;
-  box-shadow: none;
+  background: var(--blue);
 }
 
 .brand-image {
