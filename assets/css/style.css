@@ -388,8 +388,9 @@ body.is-transitioning .transition-curtain {
 
 .feature-panel {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: flex-start;
+  padding-top: 8rem;
 }
 
 .feature-card {
