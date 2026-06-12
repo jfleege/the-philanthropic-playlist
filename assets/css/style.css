@@ -969,17 +969,19 @@ body.is-transitioning .transition-curtain {
 
 .home-title-wrap {
   position: relative;
-  display: inline-block;
+  display: block;
   width: fit-content;
+  max-width: 100%;
 }
 
 .music-notes {
   position: absolute;
-  right: -120px;
-  bottom: 35px;
-  width: 140px;
-  height: 140px;
+  right: -190px;
+  top: 46%;
+  width: 150px;
+  height: 120px;
   pointer-events: none;
+  transform: translateY(-50%);
 }
 
 .music-note {
@@ -988,84 +990,78 @@ body.is-transitioning .transition-curtain {
   font-family: var(--font-body);
   font-weight: 900;
   line-height: 1;
-  opacity: 0.95;
+  opacity: 0.75;
   will-change: transform;
   animation: musicNoteFloat 5.5s ease-in-out infinite;
 }
 
+/* Keep them clustered instead of scattered */
 .note-1 {
-  top: 12px;
-  left: 8px;
-  font-size: 2rem;
+  top: 8px;
+  left: 18px;
+  font-size: 1.9rem;
   color: var(--blue);
   animation-delay: 0s;
 }
 
 .note-2 {
-  top: 48px;
-  left: 52px;
-  font-size: 2.5rem;
+  top: 44px;
+  left: 64px;
+  font-size: 2.25rem;
   color: var(--peach);
   animation-delay: -1.3s;
 }
 
 .note-3 {
-  top: 84px;
-  left: 16px;
-  font-size: 1.8rem;
+  top: 76px;
+  left: 26px;
+  font-size: 1.55rem;
   color: var(--blue-soft);
   animation-delay: -2.2s;
 }
 
 .note-4 {
-  top: 20px;
-  left: 88px;
-  font-size: 2.1rem;
+  top: 0;
+  left: 98px;
+  font-size: 1.65rem;
   color: var(--pink);
   animation-delay: -3.1s;
 }
 
 @keyframes musicNoteFloat {
   0%, 100% {
-    transform: translateY(0px) rotate(0deg);
+    transform: translateY(0) translateX(0) rotate(0deg);
   }
+
   25% {
-    transform: translateY(-6px) rotate(-4deg);
+    transform: translateY(-5px) translateX(2px) rotate(-4deg);
   }
+
   50% {
-    transform: translateY(-12px) rotate(3deg);
+    transform: translateY(-10px) translateX(-2px) rotate(3deg);
   }
+
   75% {
-    transform: translateY(-5px) rotate(-2deg);
+    transform: translateY(-4px) translateX(1px) rotate(-2deg);
   }
 }
 
-/* Mobile adjustment */
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   .music-notes {
     right: -90px;
-    bottom: 20px;
-    width: 90px;
-    height: 90px;
+    top: 52%;
+    transform: translateY(-50%) scale(0.85);
   }
+}
 
-  .note-1 {
-    font-size: 1.5rem;
-  }
-
-  .note-2 {
-    font-size: 1.8rem;
-    left: 38px;
-  }
-
-  .note-3 {
-    font-size: 1.35rem;
-    top: 60px;
-  }
-
-  .note-4 {
-    font-size: 1.55rem;
-    left: 64px;
+@media (max-width: 800px) {
+  .music-notes {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
   }
 }
 
