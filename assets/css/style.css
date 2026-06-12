@@ -976,8 +976,8 @@ body.is-transitioning .transition-curtain {
 
 .music-notes {
   position: absolute;
-  right: 0px;
-  top: 46%;
+  right: 50px;
+  top: 68%;
   width: 150px;
   height: 120px;
   pointer-events: none;
