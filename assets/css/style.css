@@ -25,6 +25,7 @@
    21. Footer: Icon Links + Logo Lockup
    22. Recent Performance Feature Card
    23. Center About Page Title
+   24. Sidebar Logo Image
 ========================================================= */
 
 
@@ -1294,4 +1295,22 @@ body.is-transitioning .transition-curtain {
 .site-frame.no-feature .floating-title-line {
   justify-content: center;
   width: 100%;
+}
+
+/* =========================================================
+  24. Sidebar Logo Image
+========================================================= */
+
+.brand-image-link {
+  padding: 0;
+  overflow: hidden;
+  background: transparent;
+  box-shadow: none;
+}
+
+.brand-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
 }
