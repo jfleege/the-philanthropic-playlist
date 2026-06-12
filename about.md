@@ -8,7 +8,7 @@ hide_feature: true
 
 <section class="about-flow">
 
-  <div class="about-block align-center">
+  <div class="about-block align-left">
     <p class="about-kicker">Who We Are</p>
     <h2>A student-led music and philanthropy organization.</h2>
     <p>
