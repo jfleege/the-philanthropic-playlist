@@ -390,7 +390,7 @@ body.is-transitioning .transition-curtain {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 28rem;
+  padding-top: 22rem;
 }
 
 .feature-card {
@@ -408,7 +408,7 @@ body.is-transitioning .transition-curtain {
     radial-gradient(circle at 88% 82%, rgba(244, 203, 208, 0.85), transparent 22%),
     var(--tan-light);
   border: 2px solid var(--soft-line);
-  border-radius: 22px;
+  border-radius: 28px;
   box-shadow: 0 14px 40px rgba(36, 103, 131, 0.11);
 }
 
