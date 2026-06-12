@@ -24,6 +24,7 @@
    20. Home Page Floating Music Notes
    21. Footer: Icon Links + Logo Lockup
    22. Recent Performance Feature Card
+   23. Center About Page Title
 ========================================================= */
 
 
@@ -1273,4 +1274,24 @@ body.is-transitioning .transition-curtain {
   color: var(--blue-dark);
   font-weight: 700;
   line-height: 1.5;
+}
+
+/* =========================================================
+  23. Center About Page Title
+========================================================= */
+
+.site-frame.no-feature .main-content h1 {
+  text-align: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.site-frame.no-feature .floating-title {
+  align-items: center;
+}
+
+.site-frame.no-feature .floating-title-line {
+  justify-content: center;
+  width: 100%;
 }
