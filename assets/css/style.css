@@ -167,11 +167,18 @@ html::after {
    The .is-transitioning class is added by transitions.js.
 ========================================================= */
 
+.page-stage {
+  animation: pageEnter 0.75s cubic-bezier(.76, 0, .24, 1) both;
+  transition:
+    opacity 0.75s cubic-bezier(.76, 0, .24, 1),
+    transform 0.75s cubic-bezier(.76, 0, .24, 1);
+}
+
 .transition-curtain {
   opacity: 0;
   transform: none;
-  background: var(--tan);
-  transition: opacity 0.45s ease;
+  background: transparent;
+  transition: none;
 }
 
 body.is-transitioning .transition-curtain {
@@ -181,10 +188,7 @@ body.is-transitioning .transition-curtain {
 
 body.is-transitioning .page-stage {
   opacity: 0;
-  transform: translateY(18px) scale(0.99);
-  transition:
-    opacity 0.45s ease,
-    transform 0.45s cubic-bezier(.76, 0, .24, 1);
+  transform: translateY(34px) scale(0.985);
 }
 
 /* =========================================================
