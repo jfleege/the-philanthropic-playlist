@@ -1313,3 +1313,33 @@ body.is-transitioning .transition-curtain {
   display: block;
   object-fit: contain;
 }
+
+/* =========================================================
+  25. Page Enter/Exit Animation
+========================================================= */
+
+.page-stage {
+  animation: pageEnter 0.75s cubic-bezier(.76, 0, .24, 1) both;
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(34px) scale(0.985);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+body.is-transitioning .page-stage {
+  transform: scale(1.025) translateY(26px);
+  opacity: 0;
+}
+
+body.is-transitioning .transition-curtain {
+  opacity: 1;
+  transform: translateY(0);
+}
