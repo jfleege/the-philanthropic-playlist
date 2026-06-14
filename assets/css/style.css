@@ -1508,15 +1508,15 @@ body.is-transitioning .transition-curtain {
 /* Floating angled "The" */
 .home-title-the {
   position: absolute;
-  top: -2.4rem;
-  left: -2rem; /* adjust this until it sits above/right of the P */
+  top: -3rem;
+  left: -2.8rem; /* adjust this until it sits above/right of the P */
   z-index: 5;
   pointer-events: none;
 
   font-family: 'Comforter Brush', cursive; /* or another accent font */
   font-size: clamp(2.2rem, 3.6vw, 4.1rem);
   line-height: 1;
-  color: var(--blue);
+  color: var(--blue-soft);
   letter-spacing: 0.02em;
 
   transform: rotate(-45deg);
