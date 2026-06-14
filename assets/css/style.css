@@ -30,6 +30,7 @@
    26. Team Page: No Connector Line
    27. About Page: Current Viewing Highlight
    28. Team Page Cards
+   29. Events Page
 ========================================================= */
 
 
@@ -1532,5 +1533,48 @@ body.is-transitioning .transition-curtain {
   }
   50% {
     transform: rotate(-17deg) translateY(-8px);
+  }
+}
+
+/* =========================================================
+  29. Events Page
+========================================================= */
+
+.events-flow > .about-connector-svg {
+  display: none;
+}
+
+.calendar-block {
+  width: min(1150px, 100%);
+}
+
+.calendar-wrap {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  overflow: hidden;
+  background: rgba(255, 250, 246, 0.78);
+  border: 2px solid rgba(36, 103, 131, 0.13);
+  border-radius: 26px;
+  box-shadow: 0 12px 30px rgba(36, 103, 131, 0.08);
+}
+
+.calendar-wrap iframe {
+  width: 100%;
+  height: 650px;
+  display: block;
+  border-radius: 20px;
+  background: var(--tan-light);
+}
+
+@media (max-width: 800px) {
+  .calendar-wrap {
+    padding: 0.5rem;
+    border-radius: 20px;
+  }
+
+  .calendar-wrap iframe {
+    height: 520px;
+    border-radius: 16px;
   }
 }
