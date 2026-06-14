@@ -1329,3 +1329,46 @@ body.is-transitioning .transition-curtain {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* =========================================================
+  OVERRIDE: Clean Matching Fade Transition
+========================================================= */
+
+.page-stage {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  animation: pageEnter 0.85s cubic-bezier(.76, 0, .24, 1) both;
+  transition: opacity 0.85s cubic-bezier(.76, 0, .24, 1);
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.transition-curtain {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  pointer-events: none;
+  opacity: 0;
+  transform: none;
+  background: var(--tan);
+  transition: opacity 0.85s cubic-bezier(.76, 0, .24, 1);
+}
+
+body.is-transitioning .page-stage {
+  opacity: 0;
+  transform: none;
+}
+
+body.is-transitioning .transition-curtain {
+  opacity: 1;
+  transform: none;
+}
