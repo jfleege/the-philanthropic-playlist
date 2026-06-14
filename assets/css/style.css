@@ -1399,7 +1399,7 @@ body.is-transitioning .transition-curtain {
 }
 
 .about-flow:not(.team-flow) .about-block {
-  opacity: 0.72;
+  opacity: 0.88;
 }
 
 .about-flow:not(.team-flow) .about-block.is-viewing {

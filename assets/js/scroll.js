@@ -289,27 +289,20 @@ const highlightViewedAboutBlock = () => {
     if (!blocks.length) return;
 
     const updateActiveBlock = () => {
-      const readingLine = window.innerHeight * 0.38;
+      const readingLine = window.innerHeight * 0.45;
 
       let activeBlock = blocks[0];
-      let closestDistance = Infinity;
 
       blocks.forEach((block) => {
         const rect = block.getBoundingClientRect();
 
-        const isVisible = rect.bottom > 0 && rect.top < window.innerHeight;
-        if (!isVisible) return;
-
-        const distance = Math.abs(rect.top - readingLine);
-
-        if (distance < closestDistance) {
-          closestDistance = distance;
+        if (rect.top <= readingLine) {
           activeBlock = block;
         }
       });
 
       const nearBottom =
-        window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 80;
+        window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 100;
 
       if (nearBottom) {
         activeBlock = blocks[blocks.length - 1];
