@@ -1411,41 +1411,78 @@ body.is-transitioning .transition-curtain {
   28. Team Page Cards
 ========================================================= */
 
+.team-flow > .about-connector-svg {
+  display: none;
+}
+
 .team-card {
-  width: min(1250px, 100%);
-  padding: 3rem 3.75rem;
+  width: min(1050px, 100%);
+  padding: 2.25rem 2.75rem;
 }
 
 .team-member-content {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 420px;
-  gap: 3.5rem;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 2.5rem;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 .team-member-photo {
-  width: 420px;
-  height: 420px;
+  width: 320px;
+  height: 320px;
   display: block;
   object-fit: cover;
-  border-radius: 32px;
+  border-radius: 28px;
   border: 2px solid rgba(36, 103, 131, 0.16);
-  box-shadow: 0 16px 34px rgba(36, 103, 131, 0.13);
+  box-shadow: 0 14px 30px rgba(36, 103, 131, 0.12);
   background: var(--tan-light);
   justify-self: end;
 }
 
 .team-member-details {
   margin: 0;
-  padding-left: 1.35rem;
+  padding-left: 1.25rem;
   color: var(--blue-dark);
   font-family: var(--font-body);
-  font-size: 1.3rem;
+  font-size: 1.08rem;
   font-weight: 700;
-  line-height: 1.8;
+  line-height: 1.65;
 }
 
 .team-member-details li {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.45rem;
+}
+
+.team-member-details strong {
+  display: inline !important;
+  margin: 0 !important;
+  color: var(--blue);
+  font-family: var(--font-body);
+  font-size: 1.08rem !important;
+  font-weight: 900;
+  line-height: inherit;
+}
+
+.team-card h2 {
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 850px) {
+  .team-member-content {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .team-member-photo {
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    justify-self: center;
+  }
+
+  .team-member-details,
+  .team-member-details strong {
+    font-size: 1rem !important;
+  }
 }
