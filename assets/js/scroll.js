@@ -289,24 +289,26 @@ const highlightViewedAboutBlock = () => {
     if (!blocks.length) return;
 
     const updateActiveBlock = () => {
-      const viewportCenter = window.innerHeight / 2;
-
-      let closestBlock = blocks[0];
-      let closestDistance = Infinity;
+      let mostVisibleBlock = blocks[0];
+      let mostVisibleAmount = 0;
 
       blocks.forEach((block) => {
         const rect = block.getBoundingClientRect();
-        const blockCenter = rect.top + rect.height / 2;
-        const distance = Math.abs(blockCenter - viewportCenter);
 
-        if (distance < closestDistance) {
-          closestDistance = distance;
-          closestBlock = block;
+        const visibleTop = Math.max(rect.top, 0);
+        const visibleBottom = Math.min(rect.bottom, window.innerHeight);
+        const visibleHeight = Math.max(0, visibleBottom - visibleTop);
+
+        const visibleRatio = visibleHeight / rect.height;
+
+        if (visibleRatio > mostVisibleAmount) {
+          mostVisibleAmount = visibleRatio;
+          mostVisibleBlock = block;
         }
       });
 
       blocks.forEach((block) => {
-        block.classList.toggle("is-viewing", block === closestBlock);
+        block.classList.toggle("is-viewing", block === mostVisibleBlock);
       });
     };
 
