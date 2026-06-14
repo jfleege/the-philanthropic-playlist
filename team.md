@@ -8,7 +8,7 @@ hide_feature: true
 
 <section class="about-flow team-flow">
 
- <div class="team-profile-info">
+  <div class="team-profile-info">
     <p class="about-kicker">President</p>
     <h2>Amber Smith</h2>
 
