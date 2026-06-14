@@ -1508,7 +1508,7 @@ body.is-transitioning .transition-curtain {
 /* Floating angled "The" */
 .home-title-the {
   position: absolute;
-  top: 0.4rem;
+  top: 0.1rem;
   left: 0rem; /* adjust this until it sits above/right of the P */
   z-index: 5;
   pointer-events: none;
@@ -1516,7 +1516,7 @@ body.is-transitioning .transition-curtain {
   font-family: 'Comforter Brush', cursive; /* or another accent font */
   font-size: clamp(1.7rem, 2.8vw, 3.2rem);
   line-height: 1;
-  color: var(--blue-dark);
+  color: var(--pink);
   letter-spacing: 0.02em;
 
   transform: rotate(-45deg);
@@ -1528,9 +1528,9 @@ body.is-transitioning .transition-curtain {
 
 @keyframes float-the {
   0%, 100% {
-    transform: rotate(-35deg) translateY(0px);
+    transform: rotate(-23deg) translateY(0px);
   }
   50% {
-    transform: rotate(-35deg) translateY(-8px);
+    transform: rotate(-23deg) translateY(-8px);
   }
 }
