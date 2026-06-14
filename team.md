@@ -11,7 +11,7 @@ hide_feature: true
   <div class="about-block align-left team-card">
     <div class="team-profile-layout">
       <div class="team-profile-info">
-        <p class="about-kicker">President</p>
+        <p class="about-kicker">Co-President</p>
         <h2>Amber Smith</h2>
 
         <ul class="team-member-details">
@@ -30,7 +30,7 @@ hide_feature: true
   <div class="about-block align-right team-card">
     <div class="team-profile-layout">
       <div class="team-profile-info">
-        <p class="about-kicker">Vice President</p>
+        <p class="about-kicker">Co-President</p>
         <h2>Mia Yurik</h2>
 
         <ul class="team-member-details">
