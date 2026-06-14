@@ -4,7 +4,7 @@ title: About
 hide_feature: true
 ---
 
-# About Philanthropic Playlist
+# About TPP
 
 <section class="about-flow">
 
