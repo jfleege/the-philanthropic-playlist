@@ -4,7 +4,8 @@ title: Home
 ---
 
 <div class="home-title-wrap">
-  <h1>Philanthropic<br>Playlist</h1>
+  <span class="home-title-the">The</span>
+  <h1 class="home-title">Philanthropic Playlist</h1>
 
   <div class="music-notes" aria-hidden="true">
     <span class="music-note note-1">♪</span>

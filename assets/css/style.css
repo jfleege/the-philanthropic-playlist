@@ -1495,3 +1495,42 @@ body.is-transitioning .transition-curtain {
     font-size: 1rem !important;
   }
 }
+
+/* =========================================================
+  OVERRIDE: Updated Home Page Lettering
+========================================================= */
+
+.home-title-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+/* Floating angled "The" */
+.home-title-the {
+  position: absolute;
+  top: 0.4rem;
+  left: 11.5rem; /* adjust this until it sits above/right of the P */
+  z-index: 5;
+  pointer-events: none;
+
+  font-family: 'Comforter Brush', cursive; /* or another accent font */
+  font-size: clamp(1.7rem, 2.8vw, 3.2rem);
+  line-height: 1;
+  color: var(--blue-dark);
+  letter-spacing: 0.02em;
+
+  transform: rotate(-45deg);
+  transform-origin: center;
+  opacity: 0.95;
+
+  animation: float-the 4.8s ease-in-out infinite;
+}
+
+@keyframes float-the {
+  0%, 100% {
+    transform: rotate(-45deg) translateY(0px);
+  }
+  50% {
+    transform: rotate(-45deg) translateY(-8px);
+  }
+}

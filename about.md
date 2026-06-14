@@ -12,7 +12,7 @@ hide_feature: true
     <p class="about-kicker">Who We Are</p>
     <h2>A student-led music and philanthropy organization.</h2>
     <p>
-      Philanthropic Playlist is a student organization at the University of Illinois that brings students together through music, performance, and service. We are built around the idea that music can do more than entertain — it can create community, raise awareness, and support meaningful causes.
+      The Philanthropic Playlist is a student organization at the University of Illinois that brings students together through music, performance, and service. We are built around the idea that music can do more than entertain — it can create community, raise awareness, and support meaningful causes.
     </p>
   </div>
 
@@ -39,7 +39,7 @@ hide_feature: true
     <p class="about-kicker">Who Can Join</p>
     <h2>Open to all instruments and experience levels.</h2>
     <p>
-      Philanthropic Playlist is open to students of all instruments and experience levels. Whether you have years of performance experience, are returning to music after time away, or simply want to be part of a music-centered community, you are welcome here.
+      The Philanthropic Playlist is open to students of all instruments and experience levels. Whether you have years of performance experience, are returning to music after time away, or simply want to be part of a music-centered community, you are welcome here.
     </p>
     <p>
       You do not have to be a music major to join. Anyone interested in music, philanthropy, fundraising, or community-building can get involved.
@@ -50,7 +50,7 @@ hide_feature: true
     <p class="about-kicker">Why Music?</p>
     <h2>Music gives people a reason to gather.</h2>
     <p>
-      Music creates shared experiences. It brings people into the same room, gives students a creative outlet, and creates opportunities to support causes beyond campus. Philanthropic Playlist uses that connection to turn performance into impact.
+      Music creates shared experiences. It brings people into the same room, gives students a creative outlet, and creates opportunities to support causes beyond campus. The Philanthropic Playlist uses that connection to turn performance into impact.
     </p>
   </div>
 
