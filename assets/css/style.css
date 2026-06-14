@@ -1509,7 +1509,7 @@ body.is-transitioning .transition-curtain {
 .home-title-the {
   position: absolute;
   top: 0.4rem;
-  left: 11.5rem; /* adjust this until it sits above/right of the P */
+  left: 0rem; /* adjust this until it sits above/right of the P */
   z-index: 5;
   pointer-events: none;
 
@@ -1528,9 +1528,9 @@ body.is-transitioning .transition-curtain {
 
 @keyframes float-the {
   0%, 100% {
-    transform: rotate(-45deg) translateY(0px);
+    transform: rotate(-35deg) translateY(0px);
   }
   50% {
-    transform: rotate(-45deg) translateY(-8px);
+    transform: rotate(-35deg) translateY(-8px);
   }
 }
