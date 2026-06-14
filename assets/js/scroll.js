@@ -281,26 +281,30 @@ path.setAttribute("d", d);
     }, 300)
   );
 
-  const highlightViewedAboutBlock = () => {
+const highlightViewedAboutBlock = () => {
   const aboutFlow = document.querySelector(".about-flow:not(.team-flow)");
   if (!aboutFlow || typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
 
   const blocks = aboutFlow.querySelectorAll(".about-block");
 
+  if (blocks.length > 0) {
+    blocks[0].classList.add("is-viewing");
+  }
+
   blocks.forEach((block) => {
     ScrollTrigger.create({
-  trigger: block,
-  start: "top 75%",
-  end: "bottom 25%",
-  onEnter: () => {
-    blocks.forEach((item) => item.classList.remove("is-viewing"));
-    block.classList.add("is-viewing");
-  },
-  onEnterBack: () => {
-    blocks.forEach((item) => item.classList.remove("is-viewing"));
-    block.classList.add("is-viewing");
-  }
-});
+      trigger: block,
+      start: "top 75%",
+      end: "bottom 25%",
+      onEnter: () => {
+        blocks.forEach((item) => item.classList.remove("is-viewing"));
+        block.classList.add("is-viewing");
+      },
+      onEnterBack: () => {
+        blocks.forEach((item) => item.classList.remove("is-viewing"));
+        block.classList.add("is-viewing");
+      }
+    });
   });
 };
 
