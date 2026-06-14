@@ -282,7 +282,7 @@ path.setAttribute("d", d);
   );
 
 const highlightViewedAboutBlock = () => {
-  const flows = document.querySelectorAll(".about-flow:not(.team-flow)");
+  const flows = document.querySelectorAll(".about-flow");
 
   flows.forEach((flow) => {
     const blocks = Array.from(flow.querySelectorAll(".about-block"));
