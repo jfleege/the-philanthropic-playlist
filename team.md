@@ -94,7 +94,7 @@ hide_feature: true
           <li><strong>Year in College:</strong> Senior</li>
           <li><strong>Major:</strong> Molecular and Cellular Biology</li>
           <li><strong>Instrument:</strong> Oboe</li>
-          <li><strong>Favorite Song/Album:</strong> </li>
+          <li><strong>Favorite Song/Album:</strong> Do I Ever Cross Your Mind — Chet Atkins and Dolly Parton</li>
           <li><strong>Spirit Animal:</strong> Frog</li>
         </ul>
       </div>
