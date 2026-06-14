@@ -32,6 +32,7 @@
    28. Team Page Cards
    29. Events Page
    30. Active Box: Playful Multi-Layer Outline
+   31. FINAL MOBILE POLISH
 ========================================================= */
 
 
@@ -1723,5 +1724,444 @@ body.is-transitioning .transition-curtain {
 @media (max-width: 600px) {
   .snake-game-info {
     flex-direction: column;
+  }
+}
+
+/* =========================================================
+  31. FINAL MOBILE POLISH
+   ---------------------------------------------------------
+   Add this at the VERY bottom of style.css.
+========================================================= */
+
+@media (max-width: 900px) {
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    background:
+      radial-gradient(circle at 20% 12%, rgba(168, 216, 238, 0.32), transparent 24%),
+      radial-gradient(circle at 86% 28%, rgba(248, 191, 114, 0.26), transparent 22%),
+      radial-gradient(circle at 22% 82%, rgba(244, 203, 208, 0.34), transparent 24%),
+      var(--tan);
+  }
+
+  html::before,
+  html::after {
+    opacity: 0.16;
+    transform: scale(0.7);
+  }
+
+  .react-blob {
+    opacity: 0.38;
+  }
+
+  /* Main frame becomes an intentional mobile card/page */
+  .site-frame,
+  .site-frame.no-feature {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    margin: 0;
+    min-height: 100vh;
+    padding: 1rem;
+    gap: 1.5rem;
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+    overflow: hidden;
+  }
+
+  /* Header/nav */
+  .sidebar {
+    padding: 0.35rem 0 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .brand {
+    width: 54px;
+    height: 54px;
+    margin-bottom: 0;
+    flex: 0 0 auto;
+  }
+
+  .brand-image-link {
+    padding: 0.45rem;
+  }
+
+  .sidebar-section {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .sidebar-label {
+    display: none;
+  }
+
+  .sidebar-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .sidebar-nav a {
+    min-height: 40px;
+    padding: 0.45rem 0.68rem;
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.9rem;
+    background: rgba(168, 216, 238, 0.32);
+    transform: none;
+  }
+
+  .sidebar-nav a:hover {
+    transform: translateY(-2px);
+  }
+
+  /* Main content */
+  .main-content,
+  .site-frame.no-feature .main-content {
+    width: 100%;
+    max-width: 100%;
+    align-self: start;
+  }
+
+  .main-content h1,
+  .site-frame.no-feature .main-content h1 {
+    margin-top: 0.7rem;
+    margin-bottom: 1.8rem;
+    font-size: clamp(2.9rem, 14vw, 5rem);
+    line-height: 0.95;
+    overflow-wrap: normal;
+  }
+
+  .floating-title {
+    align-items: flex-start;
+  }
+
+  .site-frame.no-feature .floating-title {
+    align-items: center;
+  }
+
+  .floating-title-line {
+    max-width: 100%;
+  }
+
+  .floating-word {
+    white-space: nowrap;
+  }
+
+  /* Home title extras */
+  .home-title-wrap {
+    max-width: 100%;
+  }
+
+  .home-title-the {
+    top: -1.8rem;
+    left: -1rem;
+    font-size: clamp(2rem, 8vw, 3.4rem);
+  }
+
+  .music-notes {
+    position: relative;
+    right: auto;
+    top: auto;
+    width: 105px;
+    height: 72px;
+    margin: -0.5rem 0 0.75rem 0.5rem;
+    transform: none;
+  }
+
+  .note-1 {
+    font-size: 1.2rem;
+    top: 0;
+    left: 0;
+  }
+
+  .note-2 {
+    font-size: 1.55rem;
+    top: 24px;
+    left: 38px;
+  }
+
+  .note-3 {
+    font-size: 1.1rem;
+    top: 48px;
+    left: 8px;
+  }
+
+  .note-4 {
+    font-size: 1.25rem;
+    top: 2px;
+    left: 72px;
+  }
+
+  /* Home mission area */
+  .mission-rotator-section {
+    width: 100%;
+    min-height: 175px;
+    margin: 2rem 0 1.2rem;
+    padding: 1.15rem;
+    border-radius: 24px;
+  }
+
+  .mission-rotator {
+    min-height: 100px;
+  }
+
+  .mission-line {
+    max-width: 100%;
+    font-size: clamp(1.35rem, 7.5vw, 2.15rem);
+    line-height: 1.1;
+  }
+
+  .home-actions {
+    width: 100%;
+    max-width: 100%;
+    margin: 1.4rem auto 0;
+    gap: 0.65rem;
+  }
+
+  .home-actions a {
+    min-height: 44px;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Show the homepage feature card on mobile instead of hiding it */
+  .feature-panel {
+    display: flex;
+    padding-top: 0;
+    justify-content: center;
+  }
+
+  .feature-card,
+  .performance-card {
+    width: 100%;
+    max-width: 460px;
+    min-height: auto;
+    margin: 0 auto;
+  }
+
+  .performance-image-wrap {
+    aspect-ratio: 16 / 10;
+  }
+
+  /* Reusable content boxes */
+  .about-flow {
+    gap: 1.65rem;
+    margin-top: 0.5rem;
+    padding-bottom: 2rem;
+  }
+
+  .about-block,
+  .about-block.align-left,
+  .about-block.align-right {
+    width: 100%;
+    align-self: stretch;
+    padding: 1.35rem;
+    border-radius: 24px;
+  }
+
+  .about-block h2 {
+    font-size: clamp(1.45rem, 8vw, 2.15rem);
+    line-height: 1.08;
+  }
+
+  .about-block p {
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  .about-kicker {
+    font-size: 0.72rem;
+    line-height: 1.25;
+  }
+
+  .about-connector-svg {
+    display: none;
+  }
+
+  /* Your active outline is great, but shrink it so it does not clip on mobile */
+  .about-block::before {
+    inset: -6px;
+    border-width: 2px;
+    border-radius: 28px;
+  }
+
+  .about-block::after {
+    inset: -10px;
+    border-width: 2px;
+    border-radius: 30px;
+  }
+
+  /* Team cards */
+  .team-card {
+    padding: 1.35rem;
+  }
+
+  .team-profile-layout {
+    grid-template-columns: 1fr;
+    gap: 1.15rem;
+  }
+
+  .team-member-photo {
+    order: -1;
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    justify-self: center;
+    border-radius: 26px;
+  }
+
+  .team-card h2 {
+    margin-bottom: 1.2rem;
+  }
+
+  .team-member-details {
+    font-size: 1rem;
+    line-height: 1.55;
+    padding-left: 1.1rem;
+  }
+
+  .team-member-details strong {
+    font-size: inherit !important;
+  }
+
+  /* Calendar */
+  .calendar-block {
+    width: 100%;
+  }
+
+  .calendar-wrap {
+    margin-top: 1rem;
+    padding: 0.4rem;
+    border-radius: 20px;
+  }
+
+  .calendar-wrap iframe {
+    height: 520px;
+    border-radius: 16px;
+  }
+
+  /* Footer */
+  .bottom-bar {
+    min-height: auto;
+    padding-top: 1.2rem;
+    padding-bottom: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .icon-links {
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .icon-link {
+    width: 54px;
+    height: 54px;
+  }
+
+  .footer-icon,
+  .footer-icon-img {
+    width: 27px;
+    height: 27px;
+  }
+
+  .footer-brand-lockup {
+    justify-content: center;
+    gap: 0.65rem;
+  }
+
+  .footer-school-logo {
+    height: 34px;
+  }
+
+  .footer-divider-x {
+    font-size: 1.05rem;
+  }
+
+  .footer-rso-logo {
+    height: 36px;
+    max-width: 210px;
+  }
+
+  /* Snake page */
+  #snakeGame {
+    width: min(340px, 100%);
+  }
+}
+
+@media (max-width: 520px) {
+  .site-frame,
+  .site-frame.no-feature {
+    padding: 0.8rem;
+  }
+
+  .sidebar {
+    align-items: flex-start;
+  }
+
+  .brand {
+    width: 48px;
+    height: 48px;
+  }
+
+  .sidebar-nav {
+    justify-content: flex-start;
+    gap: 0.35rem;
+  }
+
+  .sidebar-nav a {
+    font-size: 0.82rem;
+    padding: 0.38rem 0.54rem;
+  }
+
+  .main-content h1,
+  .site-frame.no-feature .main-content h1 {
+    font-size: clamp(2.55rem, 16vw, 4.35rem);
+  }
+
+  .mission-rotator-section {
+    min-height: 165px;
+  }
+
+  .mission-line {
+    font-size: clamp(1.25rem, 8vw, 1.85rem);
+  }
+
+  .home-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .home-actions a {
+    width: 100%;
+  }
+
+  .team-member-photo {
+    max-width: 260px;
+    height: 260px;
+  }
+
+  .calendar-wrap iframe {
+    height: 460px;
+  }
+
+  .footer-rso-logo {
+    max-width: 175px;
   }
 }

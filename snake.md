@@ -4,8 +4,6 @@ title: Secret
 hide_feature: true
 ---
 
-# Secret Snake
-
 <section class="about-flow secret-game-flow">
 
   <div class="about-block align-left secret-game-card">
