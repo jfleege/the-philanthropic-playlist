@@ -1411,30 +1411,30 @@ body.is-transitioning .transition-curtain {
   28. Team Page Cards
 ========================================================= */
 
-.team-flow {
-  gap: 3rem;
+.team-flow > .about-connector-svg {
+  display: none;
 }
 
 .team-card {
-  width: min(1050px, 100%);
+  width: min(1150px, 100%);
 }
 
 .team-member-content {
   display: grid;
-  grid-template-columns: 210px 1fr;
-  gap: 2rem;
+  grid-template-columns: 1fr 330px;
+  gap: 3rem;
   align-items: center;
   margin-top: 1.5rem;
 }
 
 .team-member-photo {
-  width: 210px;
-  height: 210px;
+  width: 330px;
+  height: 330px;
   display: block;
   object-fit: cover;
-  border-radius: 26px;
+  border-radius: 30px;
   border: 2px solid rgba(36, 103, 131, 0.16);
-  box-shadow: 0 12px 28px rgba(36, 103, 131, 0.12);
+  box-shadow: 0 16px 34px rgba(36, 103, 131, 0.13);
   background: var(--tan-light);
 }
 
@@ -1443,13 +1443,13 @@ body.is-transitioning .transition-curtain {
   padding-left: 1.25rem;
   color: var(--blue-dark);
   font-family: var(--font-body);
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-weight: 700;
-  line-height: 1.65;
+  line-height: 1.8;
 }
 
 .team-member-details li {
-  margin-bottom: 0.55rem;
+  margin-bottom: 0.65rem;
 }
 
 .team-member-details strong {
@@ -1460,20 +1460,20 @@ body.is-transitioning .transition-curtain {
   font-weight: 900;
 }
 
-/* Mobile version */
-@media (max-width: 750px) {
+@media (max-width: 850px) {
   .team-member-content {
     grid-template-columns: 1fr;
-    gap: 1.25rem;
+    gap: 1.5rem;
   }
 
   .team-member-photo {
     width: 100%;
-    max-width: 280px;
-    height: 280px;
+    max-width: 330px;
+    height: 330px;
+    justify-self: center;
   }
 
   .team-member-details {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
 }
