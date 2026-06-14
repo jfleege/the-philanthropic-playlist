@@ -2255,3 +2255,41 @@ body.is-transitioning .transition-curtain {
     transform-origin: left top;
   }
 }
+
+@media (max-width: 900px) {
+  .home-title-wrap {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    overflow: visible;
+    padding-top: 2.1rem;
+  }
+
+  .home-title-the {
+    display: block;
+    top: 0.2rem;
+    left: 0.15rem;
+    font-size: clamp(1.7rem, 7vw, 2.8rem);
+    z-index: 10;
+  }
+
+  .main-content h1.home-title {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(2.25rem, 12vw, 3.65rem);
+    line-height: 1;
+    letter-spacing: 0.005em;
+  }
+}
+
+@media (max-width: 520px) {
+  .home-title-wrap {
+    padding-top: 2rem;
+  }
+
+  .home-title-the {
+    top: 0.25rem;
+    left: 0.05rem;
+    font-size: clamp(1.65rem, 7vw, 2.5rem);
+  }
+}
