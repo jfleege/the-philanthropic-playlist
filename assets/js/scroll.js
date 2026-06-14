@@ -289,18 +289,18 @@ path.setAttribute("d", d);
 
   blocks.forEach((block) => {
     ScrollTrigger.create({
-      trigger: block,
-      start: "top 55%",
-      end: "bottom 45%",
-      onEnter: () => {
-        blocks.forEach((item) => item.classList.remove("is-viewing"));
-        block.classList.add("is-viewing");
-      },
-      onEnterBack: () => {
-        blocks.forEach((item) => item.classList.remove("is-viewing"));
-        block.classList.add("is-viewing");
-      }
-    });
+  trigger: block,
+  start: "top 75%",
+  end: "bottom 25%",
+  onEnter: () => {
+    blocks.forEach((item) => item.classList.remove("is-viewing"));
+    block.classList.add("is-viewing");
+  },
+  onEnterBack: () => {
+    blocks.forEach((item) => item.classList.remove("is-viewing"));
+    block.classList.add("is-viewing");
+  }
+});
   });
 };
 
