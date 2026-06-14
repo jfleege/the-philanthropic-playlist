@@ -49,7 +49,9 @@ hide_feature: true
   <div class="about-block align-left team-card">
     <div class="team-profile-layout">
       <div class="team-profile-info">
-        <p class="about-kicker">Treasurer</p>
+        <p class="about-kicker">
+  <a href="{{ '/snake.html' | relative_url }}" class="secret-role-link">Treasurer</a>
+</p>
         <h2>Jackson Fleege</h2>
 
         <ul class="team-member-details">

@@ -1619,3 +1619,88 @@ body.is-transitioning .transition-curtain {
   opacity: 1;
   transform: rotate(0deg) scale(1);
 }
+
+/* =========================================================
+  Secret Role Link
+========================================================= */
+
+.secret-role-link {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.secret-role-link:hover {
+  color: var(--peach);
+}
+
+/* =========================================================
+   Secret Snake Game Page
+========================================================= */
+
+.secret-game-flow > .about-connector-svg {
+  display: none;
+}
+
+.secret-game-card {
+  width: min(900px, 100%);
+}
+
+.snake-game-wrap {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+}
+
+#snakeGame {
+  width: min(420px, 100%);
+  height: auto;
+  display: block;
+  background: var(--tan-light);
+  border: 3px solid rgba(36, 103, 131, 0.2);
+  border-radius: 26px;
+  box-shadow: 0 16px 36px rgba(36, 103, 131, 0.12);
+}
+
+.snake-game-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.snake-score {
+  margin: 0;
+  color: var(--blue-dark);
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+
+.snake-button {
+  border: 0;
+  padding: 0.75rem 1.1rem;
+  color: var(--white);
+  background: var(--blue);
+  font-family: var(--font-body);
+  font-weight: 900;
+  border-radius: 999px;
+  box-shadow: 0 8px 18px rgba(36, 103, 131, 0.16);
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.snake-button:hover {
+  color: var(--blue-dark);
+  background: var(--peach);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .snake-game-info {
+    flex-direction: column;
+  }
+}
