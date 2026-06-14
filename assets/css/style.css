@@ -1621,24 +1621,37 @@ body.is-transitioning .transition-curtain {
 }
 
 /* =========================================================
-  Secret Role Link
+   Secret Treasurer Link
+   ---------------------------------------------------------
+   Looks exactly like the other role labels,
+   but turns peach on hover.
 ========================================================= */
 
-.secret-role-link {
-  color: inherit;
-  text-decoration: none;
-  cursor: pointer;
+.about-kicker .secret-role-link {
+  color: inherit !important;
   background: transparent !important;
   box-shadow: none !important;
   padding: 0 !important;
   margin: 0 !important;
   border-radius: 0 !important;
+
+  display: inline !important;
+  font-family: inherit !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  letter-spacing: inherit !important;
+  text-transform: inherit !important;
+  line-height: inherit !important;
+  text-decoration: none !important;
+
+  cursor: pointer;
   transition: color 0.2s ease;
 }
 
-.secret-role-link:hover {
-  color: var(--peach);
+.about-kicker .secret-role-link:hover {
+  color: var(--peach) !important;
   background: transparent !important;
+  box-shadow: none !important;
   transform: none !important;
 }
 

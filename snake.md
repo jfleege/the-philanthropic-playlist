@@ -9,10 +9,10 @@ hide_feature: true
 <section class="about-flow secret-game-flow">
 
   <div class="about-block align-left secret-game-card">
-    <p class="about-kicker">Hidden Treasurer Mode</p>
+    <p class="about-kicker">You found the secret game...</p>
     <h2>Snake!</h2>
     <p>
-      Use the arrow keys or WASD to play. Collect the peach dots and avoid running into yourself.
+      Use WASD to play. Collect the peach dots and avoid running into yourself.
     </p>
 
     <div class="snake-game-wrap">
