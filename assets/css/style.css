@@ -29,6 +29,7 @@
    25. Page Enter/Exit Animation
    26. Team Page: No Connector Line
    27. About Page: Current Viewing Highlight
+   28. Team Page Cards
 ========================================================= */
 
 
@@ -1404,4 +1405,75 @@ body.is-transitioning .transition-curtain {
   background: rgba(255, 250, 246, 0.92);
   border-color: rgba(36, 103, 131, 0.3);
   box-shadow: 0 24px 62px rgba(36, 103, 131, 0.18);
+}
+
+/* =========================================================
+  28. Team Page Cards
+========================================================= */
+
+.team-flow {
+  gap: 3rem;
+}
+
+.team-card {
+  width: min(1050px, 100%);
+}
+
+.team-member-content {
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.team-member-photo {
+  width: 210px;
+  height: 210px;
+  display: block;
+  object-fit: cover;
+  border-radius: 26px;
+  border: 2px solid rgba(36, 103, 131, 0.16);
+  box-shadow: 0 12px 28px rgba(36, 103, 131, 0.12);
+  background: var(--tan-light);
+}
+
+.team-member-details {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--blue-dark);
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1.65;
+}
+
+.team-member-details li {
+  margin-bottom: 0.55rem;
+}
+
+.team-member-details strong {
+  display: inline;
+  margin: 0;
+  color: var(--blue);
+  font-size: inherit;
+  font-weight: 900;
+}
+
+/* Mobile version */
+@media (max-width: 750px) {
+  .team-member-content {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .team-member-photo {
+    width: 100%;
+    max-width: 280px;
+    height: 280px;
+  }
+
+  .team-member-details {
+    font-size: 1rem;
+  }
 }

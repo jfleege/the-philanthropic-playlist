@@ -8,53 +8,100 @@ hide_feature: true
 
 <section class="about-flow team-flow">
 
-  <div class="about-block align-left">
+  <div class="about-block align-left team-card">
     <p class="about-kicker">President</p>
     <h2>Amber Smith</h2>
-    <p>
-    
-    </p>
+
+    <div class="team-member-content">
+      <img src="{{ '/assets/images/team/amber-smith.jpg' | relative_url }}" alt="Amber Smith" class="team-member-photo">
+
+      <ul class="team-member-details">
+        <li><strong>Major:</strong> </li>
+        <li><strong>Instrument:</strong> </li>
+        <li><strong>Favorite Artist:</strong> </li>
+        <li><strong>Fun Fact:</strong> </li>
+      </ul>
+    </div>
   </div>
 
-  <div class="about-block align-right">
+  <div class="about-block align-right team-card">
     <p class="about-kicker">Vice President</p>
     <h2>Mia Yurik</h2>
-    <p>
-      
-    </p>
+
+    <div class="team-member-content">
+      <img src="{{ '/assets/images/team/mia-yurik.jpg' | relative_url }}" alt="Mia Yurik" class="team-member-photo">
+
+      <ul class="team-member-details">
+        <li><strong>Major:</strong> </li>
+        <li><strong>Instrument:</strong> </li>
+        <li><strong>Favorite Artist:</strong> </li>
+        <li><strong>Fun Fact:</strong> </li>
+      </ul>
+    </div>
   </div>
 
-  <div class="about-block align-left">
+    <div class="about-block align-left team-card">
     <p class="about-kicker">Treasurer</p>
     <h2>Jackson Fleege</h2>
-    <p>
-      
-    </p>
-    
+
+    <div class="team-member-content">
+      <img src="{{ '/assets/images/team/jackson-fleege.jpg' | relative_url }}" alt="Jackson Fleege" class="team-member-photo">
+
+      <ul class="team-member-details">
+        <li><strong>Major:</strong> </li>
+        <li><strong>Instrument:</strong> </li>
+        <li><strong>Favorite Artist:</strong> </li>
+        <li><strong>Fun Fact:</strong> </li>
+      </ul>
+    </div>
   </div>
 
-  <div class="about-block align-right">
+  <div class="about-block align-right team-card">
     <p class="about-kicker">Music Chair</p>
     <h2>Cole McElravey</h2>
-    <p>
-      
-    </p>
+
+    <div class="team-member-content">
+      <img src="{{ '/assets/images/team/cole-mcelravey.jpg' | relative_url }}" alt="Cole McElravey" class="team-member-photo">
+
+      <ul class="team-member-details">
+        <li><strong>Major:</strong> </li>
+        <li><strong>Instrument:</strong> </li>
+        <li><strong>Favorite Artist:</strong> </li>
+        <li><strong>Fun Fact:</strong> </li>
+      </ul>
+    </div>
   </div>
 
-  <div class="about-block align-left">
+<div class="about-block align-left team-card">
     <p class="about-kicker">Outreach Chair</p>
     <h2>Paige Flatley</h2>
-    <p>
-      
-    </p>
+
+    <div class="team-member-content">
+      <img src="{{ '/assets/images/team/paige-flatley.jpg' | relative_url }}" alt="Paige Flatley" class="team-member-photo">
+
+      <ul class="team-member-details">
+        <li><strong>Major:</strong> </li>
+        <li><strong>Instrument:</strong> </li>
+        <li><strong>Favorite Artist:</strong> </li>
+        <li><strong>Fun Fact:</strong> </li>
+      </ul>
+    </div>
   </div>
 
-  <div class="about-block align-right">
+  <div class="about-block align-right team-card">
     <p class="about-kicker">Social Chair</p>
     <h2>Jamie Hereña</h2>
-    <p>
-      
-    </p>
+
+    <div class="team-member-content">
+      <img src="{{ '/assets/images/team/jamie-herena.jpg' | relative_url }}" alt="Jamie Hereña" class="team-member-photo">
+
+      <ul class="team-member-details">
+        <li><strong>Major:</strong> </li>
+        <li><strong>Instrument:</strong> </li>
+        <li><strong>Favorite Artist:</strong> </li>
+        <li><strong>Fun Fact:</strong> </li>
+      </ul>
+    </div>
   </div>
 
 </section>
