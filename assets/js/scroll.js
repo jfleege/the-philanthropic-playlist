@@ -282,29 +282,38 @@ path.setAttribute("d", d);
   );
 
 const highlightViewedAboutBlock = () => {
-  const aboutFlow = document.querySelector(".about-flow:not(.team-flow)");
-  if (!aboutFlow || typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
+  const flows = document.querySelectorAll(".about-flow:not(.team-flow)");
 
-  const blocks = aboutFlow.querySelectorAll(".about-block");
+  flows.forEach((flow) => {
+    const blocks = Array.from(flow.querySelectorAll(".about-block"));
+    if (!blocks.length) return;
 
-  if (blocks.length > 0) {
-    blocks[0].classList.add("is-viewing");
-  }
+    const updateActiveBlock = () => {
+      const viewportCenter = window.innerHeight / 2;
 
-  blocks.forEach((block) => {
-    ScrollTrigger.create({
-      trigger: block,
-      start: "top 75%",
-      end: "bottom 25%",
-      onEnter: () => {
-        blocks.forEach((item) => item.classList.remove("is-viewing"));
-        block.classList.add("is-viewing");
-      },
-      onEnterBack: () => {
-        blocks.forEach((item) => item.classList.remove("is-viewing"));
-        block.classList.add("is-viewing");
-      }
-    });
+      let closestBlock = blocks[0];
+      let closestDistance = Infinity;
+
+      blocks.forEach((block) => {
+        const rect = block.getBoundingClientRect();
+        const blockCenter = rect.top + rect.height / 2;
+        const distance = Math.abs(blockCenter - viewportCenter);
+
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closestBlock = block;
+        }
+      });
+
+      blocks.forEach((block) => {
+        block.classList.toggle("is-viewing", block === closestBlock);
+      });
+    };
+
+    updateActiveBlock();
+
+    window.addEventListener("scroll", updateActiveBlock, { passive: true });
+    window.addEventListener("resize", updateActiveBlock);
   });
 };
 

@@ -91,11 +91,11 @@ hide_feature: true
         <h2>Paige Flatley</h2>
 
         <ul class="team-member-details">
-          <li><strong>Year in College:</strong> </li>
-          <li><strong>Major:</strong> </li>
-          <li><strong>Instrument:</strong> </li>
+          <li><strong>Year in College:</strong> Senior</li>
+          <li><strong>Major:</strong> Molecular and Cellular Biology</li>
+          <li><strong>Instrument:</strong> Oboe</li>
           <li><strong>Favorite Song/Album:</strong> </li>
-          <li><strong>Spirit Animal:</strong> </li>
+          <li><strong>Spirit Animal:</strong> Frog</li>
         </ul>
       </div>
 
