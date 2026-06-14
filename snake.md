@@ -186,28 +186,43 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   document.addEventListener("keydown", (event) => {
-    const key = event.key.toLowerCase();
+  const key = event.key.toLowerCase();
 
-    if ((key === "arrowup" || key === "w") && dy !== 1) {
-      nextDx = 0;
-      nextDy = -1;
-    }
+  const gameKeys = [
+    "arrowup",
+    "arrowdown",
+    "arrowleft",
+    "arrowright",
+    "w",
+    "a",
+    "s",
+    "d"
+  ];
 
-    if ((key === "arrowdown" || key === "s") && dy !== -1) {
-      nextDx = 0;
-      nextDy = 1;
-    }
+  if (gameKeys.includes(key)) {
+    event.preventDefault();
+  }
 
-    if ((key === "arrowleft" || key === "a") && dx !== 1) {
-      nextDx = -1;
-      nextDy = 0;
-    }
+  if ((key === "arrowup" || key === "w") && dy !== 1) {
+    nextDx = 0;
+    nextDy = -1;
+  }
 
-    if ((key === "arrowright" || key === "d") && dx !== -1) {
-      nextDx = 1;
-      nextDy = 0;
-    }
-  });
+  if ((key === "arrowdown" || key === "s") && dy !== -1) {
+    nextDx = 0;
+    nextDy = 1;
+  }
+
+  if ((key === "arrowleft" || key === "a") && dx !== 1) {
+    nextDx = -1;
+    nextDy = 0;
+  }
+
+  if ((key === "arrowright" || key === "d") && dx !== -1) {
+    nextDx = 1;
+    nextDy = 0;
+  }
+});
 
   restartButton.addEventListener("click", resetGame);
 

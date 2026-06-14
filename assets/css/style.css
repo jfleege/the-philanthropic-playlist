@@ -1628,10 +1628,18 @@ body.is-transitioning .transition-curtain {
   color: inherit;
   text-decoration: none;
   cursor: pointer;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  transition: color 0.2s ease;
 }
 
 .secret-role-link:hover {
   color: var(--peach);
+  background: transparent !important;
+  transform: none !important;
 }
 
 /* =========================================================
