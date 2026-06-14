@@ -55,7 +55,7 @@ hide_feature: true
         <li><strong>Fun Fact:</strong> </li>
       </ul>
 
-      <img src="{{ '/assets/images/team/IMG_2924.jpeg' | relative_url }}" alt="Jackson Fleege" class="team-member-photo">
+      <img src="{{ '/assets/images/IMG_2924.jpeg' | relative_url }}" alt="Jackson Fleege" class="team-member-photo">
     </div>
   </div>
 
