@@ -1508,8 +1508,8 @@ body.is-transitioning .transition-curtain {
 /* Floating angled "The" */
 .home-title-the {
   position: absolute;
-  top: -1.6rem;
-  left: -1.4rem; /* adjust this until it sits above/right of the P */
+  top: -2rem;
+  left: -1.8rem; /* adjust this until it sits above/right of the P */
   z-index: 5;
   pointer-events: none;
 
