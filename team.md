@@ -19,7 +19,7 @@ hide_feature: true
           <li><strong>Major:</strong> </li>
           <li><strong>Instrument:</strong> </li>
           <li><strong>Favorite Song/Album:</strong> </li>
-          <li><strong>Fun Fact:</strong> </li>
+          <li><strong>Spirit Animal:</strong> </li>
         </ul>
       </div>
 
@@ -38,7 +38,7 @@ hide_feature: true
           <li><strong>Major:</strong> </li>
           <li><strong>Instrument:</strong> </li>
           <li><strong>Favorite Song/Album:</strong> </li>
-          <li><strong>Fun Fact:</strong> </li>
+          <li><strong>Spirit Animal:</strong> </li>
         </ul>
       </div>
 
@@ -56,8 +56,8 @@ hide_feature: true
           <li><strong>Year in College:</strong> Senior</li>
           <li><strong>Major:</strong> Double Major in Mathematics and Statistics</li>
           <li><strong>Instrument:</strong> Alto Saxophone</li>
-          <li><strong>Favorite Song/Album:</strong> </li>
-          <li><strong>Fun Fact:</strong> </li>
+          <li><strong>Favorite Song/Album:</strong> Black — Pearl Jam</li>
+          <li><strong>Spirit Animal:</strong> Whale Shark</li>
         </ul>
       </div>
 
@@ -76,7 +76,7 @@ hide_feature: true
           <li><strong>Major:</strong> </li>
           <li><strong>Instrument:</strong> </li>
           <li><strong>Favorite Song/Album:</strong> </li>
-          <li><strong>Fun Fact:</strong> </li>
+          <li><strong>Spirit Animal:</strong> </li>
         </ul>
       </div>
 
@@ -95,7 +95,7 @@ hide_feature: true
           <li><strong>Major:</strong> </li>
           <li><strong>Instrument:</strong> </li>
           <li><strong>Favorite Song/Album:</strong> </li>
-          <li><strong>Fun Fact:</strong> </li>
+          <li><strong>Spirit Animal:</strong> </li>
         </ul>
       </div>
 
@@ -114,7 +114,7 @@ hide_feature: true
           <li><strong>Major:</strong> </li>
           <li><strong>Instrument:</strong> </li>
           <li><strong>Favorite Song/Album:</strong> </li>
-          <li><strong>Fun Fact:</strong> </li>
+          <li><strong>Spirit Animal:</strong> </li>
         </ul>
       </div>
 
