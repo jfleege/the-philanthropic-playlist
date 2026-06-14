@@ -36,7 +36,7 @@ hide_feature: true
     <p class="about-kicker">Join Us</p>
     <h2>Interested in making a difference?</h2>
     <p>
-      Whether you perform, help organize events, or simply want to support our mission, the Philanthropic Playlist is open to students who want to use music as a way to give back. Join us and help turn campus creativity into community impact.
+      Whether you perform, help organize events, or simply want to support our mission, the Philanthropic Playlist is open to students who want to use music as a way to give back. Join us and help turn campus creativity into community impact by joining our newsletter and GroupMe down below!
     </p>
   </div>
 
