@@ -1516,7 +1516,7 @@ body.is-transitioning .transition-curtain {
   font-family: 'Comforter Brush', cursive; /* or another accent font */
   font-size: clamp(2.2rem, 3.6vw, 4.1rem);
   line-height: 1;
-  color: var(--blue-soft);
+  color: var(--peach);
   letter-spacing: 0.02em;
 
   transform: rotate(-45deg);
@@ -1528,9 +1528,9 @@ body.is-transitioning .transition-curtain {
 
 @keyframes float-the {
   0%, 100% {
-    transform: rotate(-23deg) translateY(0px);
+    transform: rotate(-17deg) translateY(0px);
   }
   50% {
-    transform: rotate(-23deg) translateY(-8px);
+    transform: rotate(-17deg) translateY(-8px);
   }
 }
