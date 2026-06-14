@@ -6,7 +6,7 @@ hide_feature: true
 
 # Meet the Team!
 
-<section class="about-flow">
+<section class="about-flow team-flow">
 
   <div class="about-block align-left">
     <p class="about-kicker">President</p>

@@ -280,6 +280,31 @@ path.setAttribute("d", d);
       ScrollTrigger.refresh();
     }, 300)
   );
+
+  const highlightViewedAboutBlock = () => {
+  const aboutFlow = document.querySelector(".about-flow:not(.team-flow)");
+  if (!aboutFlow || typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
+
+  const blocks = aboutFlow.querySelectorAll(".about-block");
+
+  blocks.forEach((block) => {
+    ScrollTrigger.create({
+      trigger: block,
+      start: "top 55%",
+      end: "bottom 45%",
+      onEnter: () => {
+        blocks.forEach((item) => item.classList.remove("is-viewing"));
+        block.classList.add("is-viewing");
+      },
+      onEnterBack: () => {
+        blocks.forEach((item) => item.classList.remove("is-viewing"));
+        block.classList.add("is-viewing");
+      }
+    });
+  });
+};
+
+highlightViewedAboutBlock();
 };
 
 initAboutConnector();

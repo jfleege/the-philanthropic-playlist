@@ -27,6 +27,8 @@
    23. Center About Page Title
    24. Sidebar Logo Image
    25. Page Enter/Exit Animation
+   26. Team Page: No Connector Line
+   27. About Page: Current Viewing Highlight
 ========================================================= */
 
 
@@ -1371,4 +1373,35 @@ body.is-transitioning .page-stage {
 body.is-transitioning .transition-curtain {
   opacity: 1;
   transform: none;
+}
+
+/* =========================================================
+  26. Team Page: No Connector Line
+========================================================= */
+
+.team-flow > .about-connector-svg {
+  display: none;
+}
+
+/* =========================================================
+  27. About Page: Current Viewing Highlight
+========================================================= */
+
+.about-block {
+  transition:
+    background 0.45s ease,
+    box-shadow 0.45s ease,
+    border-color 0.45s ease,
+    opacity 0.45s ease;
+}
+
+.about-flow:not(.team-flow) .about-block {
+  opacity: 0.72;
+}
+
+.about-flow:not(.team-flow) .about-block.is-viewing {
+  opacity: 1;
+  background: rgba(255, 250, 246, 0.92);
+  border-color: rgba(36, 103, 131, 0.3);
+  box-shadow: 0 24px 62px rgba(36, 103, 131, 0.18);
 }
