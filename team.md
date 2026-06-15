@@ -101,7 +101,7 @@ hide_feature: true
         </ul>
       </div>
 
-      <img src="{{ '/assets/images/team/paige-flatley.jpg' | relative_url }}" alt="Paige Flatley" class="team-member-photo">
+      <img src="{{ '/assets/images/IMG_2394.jpeg' | relative_url }}" alt="Paige Flatley" class="team-member-photo">
     </div>
   </div>
 
