@@ -15,11 +15,12 @@ hide_feature: true
         <h2>Amber Smith</h2>
 
         <ul class="team-member-details">
-          <li><strong>Year in College:</strong> </li>
-          <li><strong>Major:</strong> </li>
-          <li><strong>Instrument:</strong> </li>
-          <li><strong>Favorite Song/Album:</strong> </li>
-          <li><strong>Spirit Animal:</strong> </li>
+          <li><strong>Year in College: Senior</strong> </li>
+          <li><strong>Major: Neuroscience </strong> </li>
+          <li><strong>Minor: Chemistry </strong> </li>
+          <li><strong>Instrument: Flute </strong> </li>
+          <li><strong>Favorite Song: Drag Path — Twenty One Pilots</strong> </li>
+          <li><strong>Spirit Animal: Otter </strong> </li>
         </ul>
       </div>
 
@@ -37,7 +38,7 @@ hide_feature: true
           <li><strong>Year in College:</strong> </li>
           <li><strong>Major:</strong> </li>
           <li><strong>Instrument:</strong> </li>
-          <li><strong>Favorite Song/Album:</strong> </li>
+          <li><strong>Favorite Song:</strong> </li>
           <li><strong>Spirit Animal:</strong> </li>
         </ul>
       </div>
@@ -57,8 +58,9 @@ hide_feature: true
         <ul class="team-member-details">
           <li><strong>Year in College:</strong> Senior</li>
           <li><strong>Major:</strong> Double Major in Mathematics and Statistics</li>
+          <li><strong>Minor: Computer Science </strong> </li>
           <li><strong>Instrument:</strong> Alto Saxophone</li>
-          <li><strong>Favorite Song/Album:</strong> Black — Pearl Jam</li>
+          <li><strong>Favorite Song:</strong> Black — Pearl Jam</li>
           <li><strong>Spirit Animal:</strong> Whale Shark</li>
         </ul>
       </div>
@@ -95,6 +97,7 @@ hide_feature: true
         <ul class="team-member-details">
           <li><strong>Year in College:</strong> Senior</li>
           <li><strong>Major:</strong> Molecular and Cellular Biology</li>
+          <li><strong>Minor:</strong> </li>
           <li><strong>Instrument:</strong> Oboe</li>
           <li><strong>Favorite Song/Album:</strong> Do I Ever Cross Your Mind — Chet Atkins and Dolly Parton</li>
           <li><strong>Spirit Animal:</strong> Frog</li>
@@ -112,11 +115,11 @@ hide_feature: true
         <h2>Jamie Hereña</h2>
 
         <ul class="team-member-details">
-          <li><strong>Year in College:</strong> </li>
-          <li><strong>Major:</strong> </li>
-          <li><strong>Instrument:</strong> </li>
-          <li><strong>Favorite Song/Album:</strong> </li>
-          <li><strong>Spirit Animal:</strong> </li>
+          <li><strong>Year in College: Senior</strong> </li>
+          <li><strong>Major: Psychology/Sociology</strong> </li>
+          <li><strong>Instrument: Trumpet</strong> </li>
+          <li><strong>Favorite Song: Baseball — Hippocampus </strong> </li>
+          <li><strong>Spirit Animal: Spinosaurus </strong> </li>
         </ul>
       </div>
 
