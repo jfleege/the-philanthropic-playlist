@@ -15,16 +15,16 @@ hide_feature: true
         <h2>Amber Smith</h2>
 
         <ul class="team-member-details">
-          <li><strong>Year in College: Senior</strong> </li>
-          <li><strong>Major: Neuroscience </strong> </li>
-          <li><strong>Minor: Chemistry </strong> </li>
-          <li><strong>Instrument: Flute </strong> </li>
-          <li><strong>Favorite Song: Drag Path — Twenty One Pilots</strong> </li>
-          <li><strong>Spirit Animal: Otter </strong> </li>
+          <li><strong>Year in College:</strong> Senior </li>
+          <li><strong>Major:</strong> Neuroscience </li>
+          <li><strong>Minor:</strong> Chemistry </li>
+          <li><strong>Instrument:</strong> Flute </li>
+          <li><strong>Favorite Song: </strong> Drag Path — Twenty One Pilots </li>
+          <li><strong>Spirit Animal:</strong> Otter </li>
         </ul>
       </div>
 
-      <img src="{{ '/assets/images/IMG_2408.jpeg' | relative_url }}" alt="Amber Smith" class="team-member-photo">
+      <img src="{{ '/assets/images/IMG_3101.jpeg' | relative_url }}" alt="Amber Smith" class="team-member-photo">
     </div>
   </div>
 
@@ -58,7 +58,7 @@ hide_feature: true
         <ul class="team-member-details">
           <li><strong>Year in College:</strong> Senior</li>
           <li><strong>Major:</strong> Double Major in Mathematics and Statistics</li>
-          <li><strong>Minor: Computer Science </strong> </li>
+          <li><strong>Minor: </strong> Computer Science </li>
           <li><strong>Instrument:</strong> Alto Saxophone</li>
           <li><strong>Favorite Song:</strong> Black — Pearl Jam</li>
           <li><strong>Spirit Animal:</strong> Whale Shark</li>
@@ -115,15 +115,15 @@ hide_feature: true
         <h2>Jamie Hereña</h2>
 
         <ul class="team-member-details">
-          <li><strong>Year in College: Senior</strong> </li>
-          <li><strong>Major: Psychology/Sociology</strong> </li>
-          <li><strong>Instrument: Trumpet</strong> </li>
-          <li><strong>Favorite Song: Baseball — Hippocampus </strong> </li>
-          <li><strong>Spirit Animal: Spinosaurus </strong> </li>
+          <li><strong>Year in College: </strong> Senior </li>
+          <li><strong>Major: </strong> Psychology/Sociology </li>
+          <li><strong>Instrument: </strong> Trumpet </li>
+          <li><strong>Favorite Song: </strong> Baseball — Hippocampus </li>
+          <li><strong>Spirit Animal: </strong> Spinosaurus </li>
         </ul>
       </div>
 
-      <img src="{{ '/assets/images/IMG_3101.jpeg' | relative_url }}" alt="Jamie Hereña" class="team-member-photo">
+      <img src="{{ '/assets/images/IMG_2408.jpeg' | relative_url }}" alt="Jamie Hereña" class="team-member-photo">
     </div>
   </div>
 
