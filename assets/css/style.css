@@ -2278,29 +2278,33 @@ body.is-transitioning .transition-curtain {
 }
 
 /* =========================================================
-   DESKTOP/TABLET HOME FIX: Stop Feature Card From Clipping
+   DESKTOP ONLY HOME FIX: Stop Feature Card From Clipping
+   ---------------------------------------------------------
+   Does not affect mobile.
 ========================================================= */
 
-.site-frame {
-  grid-template-columns: 190px minmax(0, 1fr) minmax(280px, 340px);
+@media (min-width: 1001px) {
+  .site-frame {
+    grid-template-columns: 190px minmax(0, 1fr) minmax(280px, 340px);
+  }
+
+  .main-content {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .feature-panel {
+    min-width: 0;
+  }
+
+  .feature-card,
+  .performance-card {
+    max-width: 100%;
+  }
 }
 
-.main-content {
-  min-width: 0;
-  max-width: 100%;
-}
-
-.feature-panel {
-  min-width: 0;
-}
-
-.feature-card,
-.performance-card {
-  max-width: 100%;
-}
-
-/* On medium screens, move the feature card below instead of cutting it off */
-@media (max-width: 1350px) and (min-width: 901px) {
+/* On medium desktop/laptop screens, move the feature card below */
+@media (max-width: 1350px) and (min-width: 1001px) {
   .site-frame {
     grid-template-columns: 190px minmax(0, 1fr);
   }
