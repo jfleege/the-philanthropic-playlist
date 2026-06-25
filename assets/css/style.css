@@ -2276,3 +2276,43 @@ body.is-transitioning .transition-curtain {
     transform-origin: left top;
   }
 }
+
+/* =========================================================
+   DESKTOP/TABLET HOME FIX: Stop Feature Card From Clipping
+========================================================= */
+
+.site-frame {
+  grid-template-columns: 190px minmax(0, 1fr) minmax(280px, 340px);
+}
+
+.main-content {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.feature-panel {
+  min-width: 0;
+}
+
+.feature-card,
+.performance-card {
+  max-width: 100%;
+}
+
+/* On medium screens, move the feature card below instead of cutting it off */
+@media (max-width: 1350px) and (min-width: 901px) {
+  .site-frame {
+    grid-template-columns: 190px minmax(0, 1fr);
+  }
+
+  .feature-panel {
+    grid-column: 2;
+    padding-top: 0;
+    justify-content: center;
+  }
+
+  .feature-card,
+  .performance-card {
+    width: min(520px, 100%);
+  }
+}
