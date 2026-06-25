@@ -24,7 +24,7 @@ hide_feature: true
         </ul>
       </div>
 
-      <img src="{{ '/assets/images/team/amber-smith.jpg' | relative_url }}" alt="Amber Smith" class="team-member-photo">
+      <img src="{{ '/assets/images/IMG_2408.jpeg' | relative_url }}" alt="Amber Smith" class="team-member-photo">
     </div>
   </div>
 
@@ -123,7 +123,7 @@ hide_feature: true
         </ul>
       </div>
 
-      <img src="{{ '/assets/images/team/jamie-herena.jpg' | relative_url }}" alt="Jamie Hereña" class="team-member-photo">
+      <img src="{{ '/assets/images/IMG_3101.jpeg' | relative_url }}" alt="Jamie Hereña" class="team-member-photo">
     </div>
   </div>
 
